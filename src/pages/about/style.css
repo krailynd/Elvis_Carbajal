@@ -90,9 +90,15 @@
     transition: 0.3s ease;
 }
 
+a.skill_icon {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .skill_icon:hover {
     background: var(--secondary-color);
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .skill_icon-glyph {

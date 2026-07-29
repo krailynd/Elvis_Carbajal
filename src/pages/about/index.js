@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { XIcon } from "../../components/socialicons";
-import { getTechIcon } from "../../utils/techicons";
+import { getTechIcon, getTechUrl } from "../../utils/techicons";
 import {
   dataabout,
   meta,
@@ -95,10 +95,27 @@ export const About = () => {
                     <div className="skill_icons">
                       {data.icons.map((name) => {
                         const Icon = getTechIcon(name);
-                        return (
-                          <span className="skill_icon" key={name} title={name}>
+                        const url = getTechUrl(name);
+                        const chipInner = (
+                          <>
                             <Icon className="skill_icon-glyph" />
                             <span className="skill_icon-name">{name}</span>
+                          </>
+                        );
+                        return url ? (
+                          <a
+                            className="skill_icon"
+                            key={name}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${name} — official docs`}
+                          >
+                            {chipInner}
+                          </a>
+                        ) : (
+                          <span className="skill_icon" key={name} title={name}>
+                            {chipInner}
                           </span>
                         );
                       })}
