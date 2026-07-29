@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { dataportfolio, meta } from "../../content_option";
 
 const SECTION_ORDER = [
@@ -47,6 +48,7 @@ export const Portfolio = () => {
                               rel="noopener noreferrer"
                             >
                               <div id="button_p" className="ac_btn btn">
+                                <FaGithub className="pf_btn-icon" />
                                 GitHub
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
@@ -61,6 +63,7 @@ export const Portfolio = () => {
                               rel="noopener noreferrer"
                             >
                               <div id="button_h" className="ac_btn btn">
+                                <FaExternalLinkAlt className="pf_btn-icon" />
                                 Live Preview
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
@@ -86,6 +89,7 @@ export const Portfolio = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
+                            <FaGithub className="pf_btn-icon" />
                             View on GitHub
                           </a>
                         )}
@@ -95,6 +99,7 @@ export const Portfolio = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
+                            <FaExternalLinkAlt className="pf_btn-icon" />
                             Live Preview
                           </a>
                         )}
