@@ -74,8 +74,11 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* Custom cursor must stay above every overlay (the portfolio tech
+   panel/backdrop uses z-index 9999990/9999991), so it uses the
+   maximum safe stacking value here. */
 .cursor__dot div {
-    z-index: 999999 !important;
+    z-index: 2147483647 !important;
 }
 
 .cursor__dot div:last-child {
