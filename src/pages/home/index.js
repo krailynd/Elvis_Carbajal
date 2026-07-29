@@ -16,7 +16,6 @@ export const Home = () => {
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div className="h_photo order-1 order-lg-2 h-100 d-flex flex-column justify-content-center align-items-center">
-            <h2 className="photo-name">Krailynd</h2>
             <img
               src={introdata.your_img_url}
               alt="Elvis Carbajal"
