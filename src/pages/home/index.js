@@ -2,10 +2,13 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import { useLang } from "../../i18n";
 
 export const Home = () => {
+  const { content, t, lang } = useLang();
+  const { introdata, meta } = content;
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -16,7 +19,7 @@ export const Home = () => {
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div className="h_photo order-1 order-lg-2 h-100 d-flex flex-column justify-content-center align-items-center">
-            <Link to="/about" className="intro-photo-link" aria-label="Go to About page">
+            <Link to="/about" className="intro-photo-link" aria-label={t.home.photoAria}>
               <img
                 src={introdata.your_img_url}
                 alt="Elvis Carbajal"
@@ -30,6 +33,7 @@ export const Home = () => {
                 <h2 className="mb-1x">{introdata.title}</h2>
                 <h1 className="fluidz-48 mb-1x">
                   <Typewriter
+                    key={lang}
                     options={{
                       strings: [
                         introdata.animated.first,
@@ -46,7 +50,7 @@ export const Home = () => {
                 <div className="intro_btn-action pb-5">
                   <Link to="/portfolio" className="text_2">
                     <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
+                      {t.home.portfolioBtn}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
@@ -54,7 +58,7 @@ export const Home = () => {
                   </Link>
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn">
-                      Contact Me
+                      {t.home.contactBtn}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>

@@ -4,9 +4,12 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
+import Langtoggle from "../components/langtoggle";
+import { useLang } from "../i18n";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
+  const { t } = useLang();
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -21,11 +24,12 @@ const Headermain = () => {
             {logotext}
           </Link>
           <div className="d-flex align-items-center">
+          <Langtoggle />
           <Themetoggle />
           <button className="menu__button  nav_ac" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}
           </button>
-          
+
           </div>
         </div>
 
@@ -35,16 +39,16 @@ const Headermain = () => {
               <div className="menu__container p-3">
                 <ul className="the_menu">
                   <li className="menu_item ">
-                  <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
+                  <Link  onClick={handleToggle} to="/" className="my-3">{t.nav.home}</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <Link  onClick={handleToggle} to="/portfolio" className="my-3">{t.nav.projects}</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                  <Link onClick={handleToggle} to="/about" className="my-3">{t.nav.about}</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
+                  <Link onClick={handleToggle} to="/contact" className="my-3">{t.nav.contact}</Link>
                   </li>
                 </ul>
               </div>
@@ -56,7 +60,7 @@ const Headermain = () => {
             <a href={socialprofils.github}>Github</a>
             <a href={socialprofils.twitter}>X</a>
             </div>
-            <p className="copyright m-0">copyright __ {logotext}</p>
+            <p className="copyright m-0">{t.footer.copyright} __ {logotext}</p>
           </div>
         </div>
       </header>
@@ -64,7 +68,7 @@ const Headermain = () => {
       <div className="br-bottom"></div>
       <div className="br-left"></div>
       <div className="br-right"></div>
-      
+
     </>
   );
 };
