@@ -16,6 +16,89 @@ button.btn.ac_btn:hover {
     color: var(--secondary-color);
 }
 
+/* Honeypot field: invisible to humans */
+.ct_honey {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Floating success notification with animated check --- */
+
+.ct_success {
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999998;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 28px;
+    background: var(--bg-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 35%);
+    animation: ctFloatIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ct_success-text {
+    margin: 0;
+    font-family: Marcellus, serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.ct_check {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+}
+
+.ct_check-circle {
+    stroke: var(--secondary-color);
+    stroke-width: 2;
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+    animation: ctCircleDraw 0.6s ease-out 0.15s forwards;
+}
+
+.ct_check-mark {
+    stroke: var(--secondary-color);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 36;
+    stroke-dashoffset: 36;
+    animation: ctMarkDraw 0.35s ease-out 0.7s forwards;
+}
+
+@keyframes ctFloatIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 24px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes ctCircleDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes ctMarkDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 .loading-bar {
     position: fixed;
     top: 0;
