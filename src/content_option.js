@@ -81,26 +81,32 @@ const education = [{
 const skills = [{
     name: "Java & Spring Boot — My Specialty",
     description: "Backend services with Spring Boot, REST API design and implementation, OOP, algorithms, Maven, and desktop applications (SahaNotes, SahaCalc).",
+    icons: ["Java", "Spring Boot", "Maven"],
 },
 {
     name: "SQL Databases",
     description: "PostgreSQL, MySQL and MariaDB: schema design, queries, and integration with backend services and APIs.",
+    icons: ["PostgreSQL", "MySQL", "MariaDB"],
 },
 {
     name: "Full-Stack Web",
     description: "JavaScript, TypeScript, PHP, HTML/CSS. Auth (OAuth/JWT), real-time chat and dynamic resource management in production platforms.",
+    icons: ["JavaScript", "TypeScript", "PHP", "HTML5", "CSS3"],
 },
 {
     name: "Linux, Servers & Self-hosting",
     description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
+    icons: ["Linux", "Docker", "Bash", "Cloudflare"],
 },
 {
     name: "Rust & Open Source",
     description: "Open-SahaDisk (SahaHacking org): a cross-platform terminal file manager in Rust — TUI with ratatui, background scanning, Docker integration and defensive-by-default design. MIT licensed.",
+    icons: ["Rust", "Docker", "Linux"],
 },
 {
     name: "Data & AI — In Training",
     description: "Python, Pandas and statistics through a structured self-study roadmap (Kaggle, freeCodeCamp). My long-term formation — public progress on GitHub.",
+    icons: ["Python", "Pandas", "Jupyter"],
 },
 {
     name: "AI & Research Ethics",
@@ -113,6 +119,7 @@ const skills = [{
 {
     name: "Design & Audio Production",
     description: "UI/UX, Affinity, Krita, Aseprite, Canva. Ableton Live for music production — the creative side of my engineering.",
+    icons: ["Canva", "Aseprite"],
 },
 ];
 
@@ -131,6 +138,7 @@ const services = [{
 ];
 
 // Portfolio sections: "Backend, Desktop & Systems" | "Frontend & Web" | "Data Science & AI — In Training"
+// tech: [{ name, cat }] — cat is one of: "Backend", "Frontend & UI", "Databases", "DevOps & Automation", "Data & ML"
 const dataportfolio = [
 // --- Backend, Desktop & Systems ---
 {
@@ -139,6 +147,11 @@ const dataportfolio = [
     description: "Cross-platform terminal file manager & disk-usage analyzer written in Rust — the first open-source release of my SahaHacking org (MIT). Safe-by-default file operations with pre-flight risk assessment, background folder sizing, an integrated Docker manager (containers, volumes, Compose stacks), a cleanup engine and doctor diagnostics. Ships as a single binary with zero runtime dependencies.",
     img: "https://opengraph.githubassets.com/1/sahahacking/open-sahadisk",
     github: "https://github.com/sahahacking/open-sahadisk",
+    tech: [
+        { name: "Rust", cat: "Backend" },
+        { name: "Docker", cat: "DevOps & Automation" },
+        { name: "Linux", cat: "DevOps & Automation" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -146,6 +159,11 @@ const dataportfolio = [
     description: "REST API for inventory management built in Java — layered architecture with clean separation between controllers, services and persistence, relational database design, and full CRUD endpoints for products and stock control.",
     img: "https://opengraph.githubassets.com/1/krailynd/Saha-API-inventario",
     github: "https://github.com/krailynd/Saha-API-inventario",
+    tech: [
+        { name: "Java", cat: "Backend" },
+        { name: "Spring Boot", cat: "Backend" },
+        { name: "MySQL", cat: "Databases" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -153,6 +171,10 @@ const dataportfolio = [
     description: "Authentication system built in Java — user registration and secure login flows, credential handling, input validation and account management, built as a complete desktop app.",
     img: "https://opengraph.githubassets.com/1/krailynd/Java-login",
     github: "https://github.com/krailynd/Java-login",
+    tech: [
+        { name: "Java", cat: "Backend" },
+        { name: "MySQL", cat: "Databases" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -160,6 +182,9 @@ const dataportfolio = [
     description: "Markdown-based desktop notepad built in Java — create, edit and organize notes with live rendering, local file persistence and a clean, distraction-free interface.",
     img: "https://opengraph.githubassets.com/1/krailynd/SahaNotes",
     github: "https://github.com/krailynd/SahaNotes",
+    tech: [
+        { name: "Java", cat: "Backend" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -167,6 +192,9 @@ const dataportfolio = [
     description: "Java desktop calculator with a built-in graphing tool — standard and scientific operations plus visual plotting of math functions.",
     img: "https://opengraph.githubassets.com/1/krailynd/SahaCalc",
     github: "https://github.com/krailynd/SahaCalc",
+    tech: [
+        { name: "Java", cat: "Backend" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -174,6 +202,11 @@ const dataportfolio = [
     description: "Operations console (FastAPI + Docker) running on my own server — live monitoring of every SahaCloud service, utilities and document tools for the whole self-hosted ecosystem, in one place.",
     img: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsahatools.sahacloud.dpdns.org?w=640&h=360",
     demo: "https://sahatools.sahacloud.dpdns.org",
+    tech: [
+        { name: "Python", cat: "Backend" },
+        { name: "FastAPI", cat: "Backend" },
+        { name: "Docker", cat: "DevOps & Automation" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -181,6 +214,13 @@ const dataportfolio = [
     description: "My self-hosted personal cloud: an Ubuntu Server homelab running ~25 Docker containers behind a Caddy reverse proxy and Cloudflare Tunnels — Nextcloud, Mattermost, Outline docs, code-server, n8n automation, Home Assistant, SearXNG and more, across 12+ subdomains. I designed, deployed and maintain all of it.",
     img: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsahacloud.dpdns.org?w=640&h=360",
     demo: "https://sahacloud.dpdns.org",
+    tech: [
+        { name: "Linux", cat: "DevOps & Automation" },
+        { name: "Docker", cat: "DevOps & Automation" },
+        { name: "Caddy", cat: "DevOps & Automation" },
+        { name: "Cloudflare", cat: "DevOps & Automation" },
+        { name: "Bash", cat: "DevOps & Automation" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -188,6 +228,10 @@ const dataportfolio = [
     description: "Automation toolkit in Bash & Nushell for SFTP/SSH workflows on Linux — scripted transfers, server routines and remote operations I use daily to manage my own infrastructure.",
     img: "https://opengraph.githubassets.com/1/krailynd/bash-nu-sftp-ssh",
     github: "https://github.com/krailynd/bash-nu-sftp-ssh",
+    tech: [
+        { name: "Bash", cat: "DevOps & Automation" },
+        { name: "Nushell", cat: "DevOps & Automation" },
+    ],
 },
 {
     section: "Backend, Desktop & Systems",
@@ -195,6 +239,9 @@ const dataportfolio = [
     description: "My Java learning log — UPSJB university projects, exercises and mini-apps documenting my progress with the language: OOP, data structures, algorithms and real coursework.",
     img: "https://opengraph.githubassets.com/1/krailynd/java-proyects",
     github: "https://github.com/krailynd/java-proyects",
+    tech: [
+        { name: "Java", cat: "Backend" },
+    ],
 },
 // --- Frontend & Web ---
 {
@@ -203,6 +250,12 @@ const dataportfolio = [
     description: "Educational platform & virtual lab with 31+ interactive physics and math simulators. I led a multidisciplinary team and built the responsive scientific UI, secure authentication (OAuth/JWT) and real-time chat. Self-hosted in production on my own server.",
     img: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsahahacking.sahacloud.dpdns.org?w=640&h=360",
     demo: "https://sahahacking.sahacloud.dpdns.org",
+    tech: [
+        { name: "JavaScript", cat: "Frontend & UI" },
+        { name: "HTML5", cat: "Frontend & UI" },
+        { name: "CSS3", cat: "Frontend & UI" },
+        { name: "PHP", cat: "Backend" },
+    ],
 },
 {
     section: "Frontend & Web",
@@ -210,6 +263,11 @@ const dataportfolio = [
     description: "Corporate website for a Peruvian ed-tech company (freelance, in production) — services catalog covering educational robotics, AI & programming courses and STEAM programs, official distributor showcase (DOBOT, Makeblock, Elecrow), blog, quotation flows and certifications pages. Fully responsive frontend.",
     img: "https://s0.wp.com/mshots/v1/https%3A%2F%2Fjvledic.com?w=640&h=360",
     demo: "https://jvledic.com",
+    tech: [
+        { name: "JavaScript", cat: "Frontend & UI" },
+        { name: "HTML5", cat: "Frontend & UI" },
+        { name: "CSS3", cat: "Frontend & UI" },
+    ],
 },
 {
     section: "Frontend & Web",
@@ -217,6 +275,12 @@ const dataportfolio = [
     description: "Freelance web page with a PHP backend — custom contact forms with validation and automated email delivery via PHPMailer, designed and deployed end-to-end.",
     img: "https://opengraph.githubassets.com/1/krailynd/Pages-rycle",
     github: "https://github.com/krailynd/Pages-rycle",
+    tech: [
+        { name: "PHP", cat: "Backend" },
+        { name: "HTML5", cat: "Frontend & UI" },
+        { name: "CSS3", cat: "Frontend & UI" },
+        { name: "JavaScript", cat: "Frontend & UI" },
+    ],
 },
 // --- Data Science & AI — In Training ---
 {
@@ -225,6 +289,13 @@ const dataportfolio = [
     description: "[In progress] My first complete data-to-model workflow on the classic Kaggle dataset — data cleaning and exploratory analysis with Pandas, feature engineering, and Logistic Regression vs Random Forest compared with proper evaluation metrics.",
     img: "https://opengraph.githubassets.com/1/krailynd/titanic-eda-kaggle",
     github: "https://github.com/krailynd/titanic-eda-kaggle",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+        { name: "Pandas", cat: "Data & ML" },
+        { name: "scikit-learn", cat: "Data & ML" },
+        { name: "Jupyter", cat: "Data & ML" },
+        { name: "Kaggle", cat: "Data & ML" },
+    ],
 },
 {
     section: "Data Science & AI — In Training",
@@ -232,6 +303,10 @@ const dataportfolio = [
     description: "[Planned] Interactive BI dashboard with Streamlit / Power BI — real business questions answered through live filters and drill-downs: the day-to-day work of a Data Analyst.",
     img: "",
     github: "https://github.com/krailynd",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+        { name: "Streamlit", cat: "Data & ML" },
+    ],
 },
 {
     section: "Data Science & AI — In Training",
@@ -239,6 +314,11 @@ const dataportfolio = [
     description: "[Planned] Customer churn prediction on telecom data — handling imbalanced classes, model selection driven by F1/Recall, and business storytelling around retention.",
     img: "",
     github: "https://github.com/krailynd",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+        { name: "Pandas", cat: "Data & ML" },
+        { name: "scikit-learn", cat: "Data & ML" },
+    ],
 },
 {
     section: "Data Science & AI — In Training",
@@ -246,6 +326,9 @@ const dataportfolio = [
     description: "[Planned] Automated web-scraping pipeline on Peruvian data sources — from raw collection to clean time-series and visual trend analysis.",
     img: "",
     github: "https://github.com/krailynd",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+    ],
 },
 {
     section: "Data Science & AI — In Training",
@@ -253,6 +336,9 @@ const dataportfolio = [
     description: "[Planned] RAG chatbot over my own documents — embeddings, vector search and an LLM that answers questions from my UPSJB notes with cited sources.",
     img: "",
     github: "https://github.com/krailynd",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+    ],
 },
 {
     section: "Data Science & AI — In Training",
@@ -260,6 +346,11 @@ const dataportfolio = [
     description: "[Planned] Flagship project: an end-to-end data solution with Peruvian public data (INEI/BCRP) — from dataset to trained model to a FastAPI service deployed on my own server.",
     img: "",
     github: "https://github.com/krailynd",
+    tech: [
+        { name: "Python", cat: "Data & ML" },
+        { name: "FastAPI", cat: "Backend" },
+        { name: "Docker", cat: "DevOps & Automation" },
+    ],
 },
 ];
 
