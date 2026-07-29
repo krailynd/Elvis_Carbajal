@@ -91,18 +91,18 @@ section {
     font-weight: 700;
 }
 
-/* --- Photo column: round portrait with minimalist circular borders --- */
+/* --- Photo column: large portrait with rounded corners + minimalist borders --- */
 
 .intro_sec .h_photo {
     padding: 40px 20px;
 }
 
 .intro-photo {
-    width: 340px;
-    height: 340px;
-    max-width: 62vw;
-    max-height: 62vw;
-    border-radius: 50%;
+    width: 400px;
+    max-width: 76%;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    border-radius: 26px;
     object-fit: cover;
     object-position: center top;
     border: 1.5px solid var(--secondary-color);
@@ -113,7 +113,7 @@ section {
 @keyframes photoFade {
     from {
         opacity: 0;
-        transform: scale(0.94);
+        transform: scale(0.97);
     }
     to {
         opacity: 1;
@@ -125,6 +125,9 @@ section {
     .intro_sec .h_photo {
         min-height: 60vh;
         margin-bottom: 30px;
+    }
+    .intro-photo {
+        max-width: 72vw;
     }
 }
 
