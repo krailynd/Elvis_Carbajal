@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt, FaLaptopCode, FaTimes } from "react-icons/fa";
 import { dataportfolio, meta } from "../../content_option";
-import { getTechIcon, TECH_CATEGORY_ORDER } from "../../utils/techicons";
+import { getTechIcon, getTechUrl, TECH_CATEGORY_ORDER } from "../../utils/techicons";
 
 const SECTION_ORDER = [
   "Backend, Desktop & Systems",
@@ -170,7 +170,9 @@ export const Portfolio = () => {
                 <FaTimes />
               </button>
             </div>
-            <p className="tech_panel-sub">Languages & technologies</p>
+            <p className="tech_panel-sub">
+              Languages & technologies — click any item to open its official docs
+            </p>
             {(() => {
               const grouped = techByCategory(panelProject);
               return TECH_CATEGORY_ORDER.filter((cat) => grouped[cat]).map(
@@ -180,10 +182,27 @@ export const Portfolio = () => {
                     <div className="tech_chips">
                       {grouped[cat].map((name) => {
                         const Icon = getTechIcon(name);
-                        return (
-                          <span className="tech_chip" key={name}>
+                        const url = getTechUrl(name);
+                        const chipInner = (
+                          <>
                             <Icon className="tech_chip-icon" />
                             {name}
+                          </>
+                        );
+                        return url ? (
+                          <a
+                            className="tech_chip"
+                            key={name}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${name} — official docs`}
+                          >
+                            {chipInner}
+                          </a>
+                        ) : (
+                          <span className="tech_chip" key={name}>
+                            {chipInner}
                           </span>
                         );
                       })}

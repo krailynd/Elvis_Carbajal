@@ -59,7 +59,41 @@ const TECH_ICONS = {
   Aseprite: SiAseprite,
 };
 
+// Official documentation / website for each technology
+const TECH_URLS = {
+  Java: "https://dev.java/",
+  "Spring Boot": "https://spring.io/projects/spring-boot",
+  Maven: "https://maven.apache.org/",
+  JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  TypeScript: "https://www.typescriptlang.org/docs/",
+  Python: "https://docs.python.org/3/",
+  Rust: "https://doc.rust-lang.org/",
+  PHP: "https://www.php.net/docs.php",
+  Bash: "https://www.gnu.org/software/bash/manual/",
+  Nushell: "https://www.nushell.sh/",
+  Docker: "https://docs.docker.com/",
+  PostgreSQL: "https://www.postgresql.org/docs/",
+  MySQL: "https://dev.mysql.com/doc/",
+  MariaDB: "https://mariadb.com/kb/en/documentation/",
+  FastAPI: "https://fastapi.tiangolo.com/",
+  HTML5: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  CSS3: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  React: "https://react.dev/",
+  Pandas: "https://pandas.pydata.org/docs/",
+  "scikit-learn": "https://scikit-learn.org/stable/",
+  Jupyter: "https://docs.jupyter.org/",
+  Kaggle: "https://www.kaggle.com/docs",
+  Streamlit: "https://docs.streamlit.io/",
+  Cloudflare: "https://developers.cloudflare.com/",
+  Linux: "https://www.kernel.org/doc/",
+  Caddy: "https://caddyserver.com/docs/",
+  Canva: "https://www.canva.com/",
+  Aseprite: "https://www.aseprite.org/",
+};
+
 export const getTechIcon = (name) => TECH_ICONS[name] || FaCode;
+
+export const getTechUrl = (name) => TECH_URLS[name] || null;
 
 export const TECH_CATEGORY_ORDER = [
   "Backend",
