@@ -5,29 +5,32 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { XIcon } from "../../components/socialicons";
 import { getTechIcon, getTechUrl } from "../../utils/techicons";
-import {
-  dataabout,
-  meta,
-  worktimeline,
-  education,
-  skills,
-  services,
-  certifications,
-  socialprofils,
-} from "../../content_option";
+import { useLang } from "../../i18n";
 
 export const About = () => {
+  const { content, t } = useLang();
+  const {
+    dataabout,
+    meta,
+    worktimeline,
+    education,
+    skills,
+    services,
+    certifications,
+    socialprofils,
+  } = content;
+
   return (
     <HelmetProvider>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About | {meta.title}</title>
+          <title> {t.about.title} | {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4">About me</h1>
+            <h1 className="display-4 mb-4">{t.about.title}</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
@@ -43,7 +46,7 @@ export const About = () => {
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+            <h3 className="color_sec py-4">{t.about.work}</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -63,7 +66,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Education</h3>
+            <h3 className="color_sec py-4">{t.about.education}</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -83,7 +86,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
+            <h3 className="color_sec py-4">{t.about.skills}</h3>
           </Col>
           <Col lg="7">
             {skills.map((data, i) => {
@@ -128,7 +131,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+            <h3 className="color_sec py-4">{t.about.services}</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {
@@ -143,7 +146,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">Certifications</h3>
+            <h3 className="color_sec py-4">{t.about.certifications}</h3>
           </Col>
           <Col lg="7">
             {certifications.map((data, i) => {
@@ -158,7 +161,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Not Necessary, but Extra</h3>
+            <h3 className="color_sec py-4">{t.about.extra}</h3>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div className="about_socials">

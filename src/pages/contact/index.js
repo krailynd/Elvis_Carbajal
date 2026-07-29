@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { contactConfig } from "../../content_option";
 import { getEmail, getMailto, getTel } from "../../utils/contact";
+import { useLang } from "../../i18n";
 
 const EMPTY_FORM = {
   nombre: "",
@@ -21,6 +20,8 @@ const sanitize = (value, maxLen) =>
   value.replace(/[\r\n\u0000-\u001f]+/g, " ").trim().slice(0, maxLen);
 
 export const ContactUs = () => {
+  const { content, t } = useLang();
+  const { meta, contactConfig } = content;
   const [formData, setFormdata] = useState({ ...EMPTY_FORM, loading: false });
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -38,13 +39,13 @@ export const ContactUs = () => {
     const required = ["nombre", "apellido", "email", "asunto", "mensaje"];
     const missing = required.some((k) => !formData[k].trim());
     if (missing) {
-      setError("All fields are required — please fill in every block before sending.");
+      setError(t.contact.errRequired);
       return;
     }
 
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(formData.email.trim());
     if (!emailOk) {
-      setError("Please enter a valid email address so I can reply to you.");
+      setError(t.contact.errEmail);
       return;
     }
 
@@ -87,7 +88,7 @@ export const ContactUs = () => {
       window.setTimeout(() => setSent(false), 4500);
     } catch (err) {
       setFormdata((prev) => ({ ...prev, loading: false }));
-      setError("Failed to send — please try again in a moment, or use the email icon on the left.");
+      setError(t.contact.errFailed);
     }
   };
 
@@ -103,12 +104,12 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
+          <title>{meta.title} | {t.contact.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4">Contact Me</h1>
+            <h1 className="display-4 mb-4">{t.contact.title}</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
@@ -124,13 +125,13 @@ export const ContactUs = () => {
             </Alert>
           </Col>
           <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
+            <h3 className="color_sec py-4">{t.contact.getInTouch}</h3>
             <div className="ct_channels">
-              <a className="ct_channel" href={getMailto()} aria-label="Send me an email">
+              <a className="ct_channel" href={getMailto()} aria-label={t.contact.emailAria}>
                 <FaEnvelope className="ct_channel-icon" />
                 <span className="ct_channel-label">Email</span>
               </a>
-              <a className="ct_channel" href={getTel()} aria-label="Call me">
+              <a className="ct_channel" href={getTel()} aria-label={t.contact.phoneAria}>
                 <FaPhoneAlt className="ct_channel-icon" />
                 <span className="ct_channel-label">Phone</span>
               </a>
@@ -156,7 +157,7 @@ export const ContactUs = () => {
                     className="form-control"
                     id="nombre"
                     name="nombre"
-                    placeholder="First Name *"
+                    placeholder={t.contact.firstName}
                     value={formData.nombre}
                     type="text"
                     maxLength={80}
@@ -168,7 +169,7 @@ export const ContactUs = () => {
                     className="form-control rounded-0"
                     id="apellido"
                     name="apellido"
-                    placeholder="Last Name *"
+                    placeholder={t.contact.lastName}
                     type="text"
                     value={formData.apellido}
                     maxLength={80}
@@ -182,7 +183,7 @@ export const ContactUs = () => {
                     className="form-control rounded-0"
                     id="email"
                     name="email"
-                    placeholder="Your Email *"
+                    placeholder={t.contact.email}
                     type="email"
                     value={formData.email}
                     maxLength={120}
@@ -194,7 +195,7 @@ export const ContactUs = () => {
                     className="form-control rounded-0"
                     id="asunto"
                     name="asunto"
-                    placeholder="Subject *"
+                    placeholder={t.contact.subject}
                     type="text"
                     value={formData.asunto}
                     maxLength={150}
@@ -206,7 +207,7 @@ export const ContactUs = () => {
                 className="form-control rounded-0"
                 id="mensaje"
                 name="mensaje"
-                placeholder="Message *"
+                placeholder={t.contact.message}
                 rows="5"
                 value={formData.mensaje}
                 maxLength={2000}
@@ -216,7 +217,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Sending..." : "Send"}
+                    {formData.loading ? t.contact.sending : t.contact.send}
                   </button>
                 </Col>
               </Row>
@@ -231,7 +232,7 @@ export const ContactUs = () => {
             <circle className="ct_check-circle" cx="26" cy="26" r="24" fill="none" />
             <path className="ct_check-mark" fill="none" d="M14 27l7.5 7.5L38 18" />
           </svg>
-          <p className="ct_success-text">Your message was sent</p>
+          <p className="ct_success-text">{t.contact.success}</p>
         </div>
       )}
 

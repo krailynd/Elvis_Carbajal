@@ -3,19 +3,18 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt, FaLaptopCode, FaTimes } from "react-icons/fa";
-import { dataportfolio, meta } from "../../content_option";
 import { getTechIcon, getTechUrl, TECH_CATEGORY_ORDER } from "../../utils/techicons";
-
-const SECTION_ORDER = [
-  "Backend, Desktop & Systems",
-  "Frontend & Web",
-  "Data Science & AI — In Training",
-];
+import { useLang } from "../../i18n";
 
 export const Portfolio = () => {
+  const { content, t } = useLang();
+  const { dataportfolio, meta } = content;
   const [openPanel, setOpenPanel] = useState(null); // index into dataportfolio
 
   const panelProject = openPanel !== null ? dataportfolio[openPanel] : null;
+
+  // Sections derived from the content itself, preserving order (works for both languages)
+  const sections = [...new Set(dataportfolio.map((p) => p.section))];
 
   const techByCategory = (project) => {
     const grouped = {};
@@ -26,25 +25,22 @@ export const Portfolio = () => {
     return grouped;
   };
 
-  // Flat index so the panel can reference a single project across sections
-  let flatIndex = -1;
-
   return (
     <HelmetProvider>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> Portfolio | {meta.title} </title>{" "}
+          <title> {t.portfolio.title} | {meta.title} </title>{" "}
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
+            <h1 className="display-4 mb-4"> {t.portfolio.title} </h1>{" "}
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
 
-        {SECTION_ORDER.map((section) => {
+        {sections.map((section) => {
           const projects = dataportfolio.filter((p) => p.section === section);
           if (projects.length === 0) return null;
           return (
@@ -52,8 +48,7 @@ export const Portfolio = () => {
               <h3 className="color_sec pf_section-title">{section}</h3>
               <div className="pf_list">
                 {projects.map((p, i) => {
-                  flatIndex = dataportfolio.indexOf(p);
-                  const myIndex = flatIndex;
+                  const myIndex = dataportfolio.indexOf(p);
                   return (
                     <div className="pf_row" key={i}>
                       <div className="pf_info">
@@ -68,7 +63,7 @@ export const Portfolio = () => {
                             >
                               <div id="button_h" className="ac_btn btn">
                                 <FaLaptopCode className="pf_btn-icon" />
-                                Languages
+                                {t.portfolio.languages}
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
                                 <div className="ring three"></div>
@@ -83,7 +78,7 @@ export const Portfolio = () => {
                             >
                               <div id="button_p" className="ac_btn btn">
                                 <FaGithub className="pf_btn-icon" />
-                                GitHub
+                                {t.portfolio.github}
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
                                 <div className="ring three"></div>
@@ -98,7 +93,7 @@ export const Portfolio = () => {
                             >
                               <div id="button_h" className="ac_btn btn">
                                 <FaExternalLinkAlt className="pf_btn-icon" />
-                                Live Preview
+                                {t.portfolio.live}
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
                                 <div className="ring three"></div>
@@ -123,7 +118,7 @@ export const Portfolio = () => {
                               rel="noopener noreferrer"
                             >
                               <FaGithub className="pf_btn-icon" />
-                              View on GitHub
+                              {t.portfolio.viewOnGithub}
                             </a>
                           )}
                           {p.demo && (
@@ -133,7 +128,7 @@ export const Portfolio = () => {
                               rel="noopener noreferrer"
                             >
                               <FaExternalLinkAlt className="pf_btn-icon" />
-                              Live Preview
+                              {t.portfolio.live}
                             </a>
                           )}
                         </div>
@@ -155,7 +150,7 @@ export const Portfolio = () => {
       />
       <aside
         className={`tech_panel ${panelProject ? "open" : ""}`}
-        aria-label="Project languages"
+        aria-label={t.portfolio.panelAria}
       >
         {panelProject && (
           <>
@@ -165,20 +160,18 @@ export const Portfolio = () => {
                 type="button"
                 className="tech_panel-close"
                 onClick={() => setOpenPanel(null)}
-                aria-label="Close panel"
+                aria-label={t.portfolio.closePanel}
               >
                 <FaTimes />
               </button>
             </div>
-            <p className="tech_panel-sub">
-              Languages & technologies — click any item to open its official docs
-            </p>
+            <p className="tech_panel-sub">{t.portfolio.panelSub}</p>
             {(() => {
               const grouped = techByCategory(panelProject);
               return TECH_CATEGORY_ORDER.filter((cat) => grouped[cat]).map(
                 (cat) => (
                   <div className="tech_group" key={cat}>
-                    <h5 className="tech_group-title">{cat}</h5>
+                    <h5 className="tech_group-title">{t.techCats[cat] || cat}</h5>
                     <div className="tech_chips">
                       {grouped[cat].map((name) => {
                         const Icon = getTechIcon(name);

@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { socialprofils } from "../../content_option";
 import { getMailto } from "../../utils/contact";
+import { useLang } from "../../i18n";
 
 // X (formerly Twitter) logo — inline SVG so it works with any react-icons version
 export const XIcon = (props) => (
@@ -50,6 +51,8 @@ const ICON_MAPPING = {
 const SIDEBAR_PLATFORMS = ["email", "github", "linkedin"];
 
 export const Socialicons = (params) => {
+  const { t } = useLang();
+
   return (
     <div className="stick_follow_icon">
       <ul>
@@ -63,7 +66,7 @@ export const Socialicons = (params) => {
                 <a
                   href={isEmail ? getMailto() : url}
                   {...(isEmail
-                    ? { "aria-label": "Send me an email" }
+                    ? { "aria-label": t.contact.emailAria }
                     : { target: "_blank", rel: "noopener noreferrer" })}
                 >
                   <IconComponent />
@@ -72,7 +75,7 @@ export const Socialicons = (params) => {
             );
           })}
       </ul>
-      <p>Contact Me</p>
+      <p>{t.sidebar.contact}</p>
     </div>
   );
 };
