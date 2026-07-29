@@ -45,26 +45,31 @@ const ICON_MAPPING = {
   youtube: FaYoutube
 };
 
+// Sidebar shows only: email, GitHub and LinkedIn
+const SIDEBAR_PLATFORMS = ["email", "github", "linkedin"];
+
 export const Socialicons = (params) => {
   return (
     <div className="stick_follow_icon">
       <ul>
-        {Object.entries(socialprofils).map(([platform, url]) => {
-          const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
-          const isEmail = platform === "email";
-          return (
-            <li key={platform}>
-              <a
-                href={url}
-                {...(isEmail
-                  ? { "aria-label": "Send me an email" }
-                  : { target: "_blank", rel: "noopener noreferrer" })}
-              >
-                <IconComponent />
-              </a>
-            </li>
-          );
-        })}
+        {Object.entries(socialprofils)
+          .filter(([platform]) => SIDEBAR_PLATFORMS.includes(platform))
+          .map(([platform, url]) => {
+            const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
+            const isEmail = platform === "email";
+            return (
+              <li key={platform}>
+                <a
+                  href={url}
+                  {...(isEmail
+                    ? { "aria-label": "Send me an email" }
+                    : { target: "_blank", rel: "noopener noreferrer" })}
+                >
+                  <IconComponent />
+                </a>
+              </li>
+            );
+          })}
       </ul>
       <p>Contact Me</p>
     </div>
