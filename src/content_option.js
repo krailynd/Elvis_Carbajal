@@ -1,23 +1,23 @@
 const logotext = "KRAILYND";
 const meta = {
     title: "Elvis Carbajal (Krailynd)",
-    description: "Systems Engineering student from Ica, Peru, training toward Data Analysis and Data Science/AI — with shipped software and a self-hosted server as proof I build things that work.",
+    description: "Java Software Developer from Ica, Peru — Spring Boot, REST APIs, MySQL/PostgreSQL. Available for work. Also training in Data Science & AI.",
 };
 
 const introdata = {
     title: "I’m Elvis Carbajal",
     animated: {
-        first: "Aspiring Data Analyst",
-        second: "Future Data Science & AI Engineer",
-        third: "Software & Java Background",
+        first: "Java Software Developer",
+        second: "Spring Boot · REST APIs · SQL Databases",
+        third: "Data Science & AI — In Training",
     },
-    description: "Systems Engineering student (UPSJB, Ica, Peru) on a structured path into data: Python, SQL and statistics first, then Machine Learning and AI Engineering. My shipped software projects and my own self-hosted server are the proof that I learn by building — and I'm now channeling that into data analysis, dashboards and ML. Goal: a first role as a Data Analyst / Data Science trainee.",
+    description: "Java Software Developer from Ica, Peru — available for internships, freelance projects and junior roles. I specialize in Java and its ecosystem: Spring Boot, REST API design, and relational databases (PostgreSQL, MySQL, MariaDB). Separately, I'm following a structured self-study roadmap toward Data Science & AI — that's my long-term formation, public on GitHub. What I offer today is solid Java/backend development.",
     your_img_url: "https://i.ibb.co/VYmK2gfZ/Imagen12222.png",
 };
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I'm training to become a Data Scientist — and long-term, an AI engineer/scientist who understands AI from the inside: training, tuning and evaluating models with scientific rigor. My way in is the proven ladder: Data Analyst first, then Data Scientist, then ML Engineer. My foundation is software: I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru) who has already shipped real products — an educational platform with 31+ interactive physics/math simulators, Java desktop apps, REST APIs — and I run my own self-hosted server, SahaCloud, with Dockerized services, databases and automation. That background feeds directly into data work: I already handle SQL and relational databases, Python scripting, Linux and taking projects from raw idea to production. Right now I'm deep into Python for data analysis, SQL, statistics and classical ML through a structured self-study roadmap, with my progress public on GitHub. I'm CITI-certified in AI ethics and responsible research. When I'm not studying or coding, I produce music and design digital content — creativity and engineering feed each other in everything I build.",
+    aboutme: "I'm a Software Developer and I specialize in Java — the language I know deepest and enjoy most. I build backend services with Spring Boot, design and implement REST APIs, and work with relational databases (PostgreSQL, MySQL, MariaDB). I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru), and I've already shipped real products: an educational platform with 31+ interactive physics/math simulators, Java desktop apps (SahaNotes, SahaCalc), an inventory REST API, and I run my own self-hosted server — SahaCloud — with Dockerized services behind a reverse proxy and Cloudflare tunnels. Separately — and I want to be transparent about this — I'm in training toward Data Science & AI through a structured self-study roadmap that runs in parallel with my work and studies. That's my long-term direction, not my current job title: what I offer today is solid Java and backend development. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I produce music and design digital content.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
@@ -69,16 +69,12 @@ const education = [{
 ];
 
 const skills = [{
-    name: "Python & SQL",
-    description: "The core of my data path: Python scripting and relational databases (MySQL, MariaDB, PostgreSQL). Currently deepening into Pandas, data analysis and ML through my roadmap.",
+    name: "Java & Spring Boot — My Specialty",
+    description: "Backend services with Spring Boot, REST API design and implementation, OOP, algorithms, Maven, and desktop applications (SahaNotes, SahaCalc).",
 },
 {
-    name: "Data & Analytics — In Training",
-    description: "Data cleaning, EDA, statistics and visualization. Practicing on Kaggle with a structured self-study plan; dashboards and BI are my next deliverables.",
-},
-{
-    name: "Java",
-    description: "My favorite language. Desktop applications (SahaNotes, SahaCalc), algorithms, OOP and robust software design — my engineering foundation.",
+    name: "SQL Databases",
+    description: "PostgreSQL, MySQL and MariaDB: schema design, queries, and integration with backend services and APIs.",
 },
 {
     name: "Full-Stack Web",
@@ -89,8 +85,12 @@ const skills = [{
     description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
 },
 {
+    name: "Data & AI — In Training",
+    description: "Python, Pandas and statistics through a structured self-study roadmap (Kaggle, freeCodeCamp). My long-term formation — public progress on GitHub.",
+},
+{
     name: "AI & Research Ethics",
-    description: "CITI-certified in AI and Human Subject Protections and Responsible Conduct of Research — the scientific rigor side of my data/AI goal.",
+    description: "CITI-certified in AI and Human Subject Protections and Responsible Conduct of Research.",
 },
 {
     name: "Design & Audio Production",
@@ -99,16 +99,16 @@ const skills = [{
 ];
 
 const services = [{
-    title: "Data Analysis — Currently in Training",
-    description: "Targeting entry-level Data Analyst / Data Science trainee roles: SQL queries, data cleaning, EDA, honest metrics and dashboards. Progress is public on GitHub.",
+    title: "Java Backend Development — For Hire",
+    description: "Spring Boot services, REST API design and implementation, and relational databases (PostgreSQL, MySQL, MariaDB). Available for internships, freelance projects and junior roles.",
 },
 {
-    title: "Data Pipelines & Automation",
-    description: "Web scraping, data collection and scheduled automation in Linux (Bash, Python, Nushell) — my bridge from automation background toward data engineering basics.",
+    title: "Desktop Apps & Automation",
+    description: "Java desktop applications, Linux scripting and automation (Bash, Python, Nushell), and deployment/self-hosting on my own server infrastructure.",
 },
 {
-    title: "Software Development — Supporting Skill",
-    description: "Java desktop apps, APIs and full-stack web with relational databases: the engineering foundation that lets me ship data products end-to-end, not just notebooks.",
+    title: "Data & AI — In Training (not for hire yet)",
+    description: "I'm studying data analysis and ML through a structured roadmap — my long-term direction. Not a service I offer today, but my progress is public on GitHub.",
 },
 ];
 
@@ -129,6 +129,16 @@ const dataportfolio = [{
 },
 {
     img: "https://picsum.photos/400/800/?grayscale",
+    description: "Saha Inventory API: REST API for inventory management built in Java, with relational database design.",
+    link: "https://github.com/krailynd/Saha-API-inventario",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "Java Login: Authentication system built in Java — user management and secure login flows.",
+    link: "https://github.com/krailynd/Java-login",
+},
+{
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "SahaNotes (Beta): A dynamic markdown-based notepad desktop application built in Java.",
     link: "https://github.com/krailynd/SahaNotes",
 },
@@ -138,19 +148,9 @@ const dataportfolio = [{
     link: "https://github.com/krailynd/SahaCalc",
 },
 {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description: "Saha Inventory API: REST API for inventory management built in Java, with relational database design.",
-    link: "https://github.com/krailynd/Saha-API-inventario",
-},
-{
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "java-proyects: My Java learning repository — university projects (UPSJB), exercises and mini-apps documenting my progress in the language.",
     link: "https://github.com/krailynd/java-proyects",
-},
-{
-    img: "https://picsum.photos/400/800/?grayscale",
-    description: "Java Login: Authentication system built in Java — user management and secure login flows.",
-    link: "https://github.com/krailynd/Java-login",
 },
 {
     img: "https://picsum.photos/400/?grayscale",
@@ -164,32 +164,32 @@ const dataportfolio = [{
 },
 {
     img: "https://picsum.photos/400/?grayscale",
-    description: "[In progress — Data Science Roadmap] Kaggle EDA & first ML models (Titanic, Pandas, feature engineering): the first full data-to-model workflow of my self-study roadmap.",
-    link: "https://github.com/krailynd",
+    description: "[In progress — Data Science formation] Titanic EDA (Kaggle): my first full data-to-model workflow — Pandas, feature engineering, Logistic Regression vs Random Forest.",
+    link: "https://github.com/krailynd/titanic-eda-kaggle",
 },
 {
     img: "https://picsum.photos/400/800/?grayscale",
-    description: "[Planned — Data Science Roadmap] Interactive BI Dashboard (Streamlit / Power BI): business questions answered with live filters — the daily work of a Data Analyst.",
+    description: "[Planned — Data Science formation] Interactive BI Dashboard (Streamlit / Power BI): business questions answered with live filters — the daily work of a Data Analyst.",
     link: "https://github.com/krailynd",
 },
 {
     img: "https://picsum.photos/400/?grayscale",
-    description: "[Planned — Data Science Roadmap] Telecom Customer Churn Prediction: imbalanced classes, F1/Recall metrics and business storytelling.",
+    description: "[Planned — Data Science formation] Telecom Customer Churn Prediction: imbalanced classes, F1/Recall metrics and business storytelling.",
     link: "https://github.com/krailynd",
 },
 {
     img: "https://picsum.photos/400/600/?grayscale",
-    description: "[Planned — Data Science Roadmap] Web Scraping + Trend Analysis (Peru): automated data collection pipeline from raw sources to time-series analysis.",
+    description: "[Planned — Data Science formation] Web Scraping + Trend Analysis (Peru): automated data collection pipeline from raw sources to time-series analysis.",
     link: "https://github.com/krailynd",
 },
 {
     img: "https://picsum.photos/400/?grayscale",
-    description: "[Planned — Data Science Roadmap] RAG Chatbot over my own documents: embeddings, vector search and an LLM answering from UPSJB notes.",
+    description: "[Planned — Data Science formation] RAG Chatbot over my own documents: embeddings, vector search and an LLM answering from UPSJB notes.",
     link: "https://github.com/krailynd",
 },
 {
     img: "https://picsum.photos/400/800/?grayscale",
-    description: "[Planned — Data Science Roadmap] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed on my own server). The project that sums up the whole roadmap.",
+    description: "[Planned — Data Science formation] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed on my own server).",
     link: "https://github.com/krailynd",
 },
 ];
@@ -231,7 +231,7 @@ const certifications = [{
 const contactConfig = {
     YOUR_EMAIL: "krailynd@vivaldi.net",
     YOUR_FONE: "+51 907 163 498",
-    description: "Looking for internships and entry-level opportunities in Data Analysis / Data Science — and always open to software collaborations and homelab talk. Let's connect!",
+    description: "Available now for Java/backend development work — internships, freelance projects and junior roles. (I'm also training in Data Science & AI, but Java is what I offer today.) Let's talk!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
