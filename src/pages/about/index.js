@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { XIcon } from "../../components/socialicons";
+import { getTechIcon } from "../../utils/techicons";
 import {
   dataabout,
   meta,
@@ -90,6 +91,19 @@ export const About = () => {
                 <div className="service_ py-4" key={i}>
                   <h5 className="service__title" style={{ fontWeight: 600 }}>{data.name}</h5>
                   <p className="service_desc">{data.description}</p>
+                  {data.icons && data.icons.length > 0 && (
+                    <div className="skill_icons">
+                      {data.icons.map((name) => {
+                        const Icon = getTechIcon(name);
+                        return (
+                          <span className="skill_icon" key={name} title={name}>
+                            <Icon className="skill_icon-glyph" />
+                            <span className="skill_icon-name">{name}</span>
+                          </span>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               );
             })}

@@ -61,6 +61,14 @@
     margin-bottom: 8px;
 }
 
+.pf_lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
 .pf_btn-icon {
     font-size: 1em;
     flex: 0 0 auto;
@@ -141,6 +149,124 @@
     background: var(--secondary-color);
     color: var(--primary-color);
     text-decoration: none;
+}
+
+/* --- Floating side panel: project languages --- */
+
+.tech_backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 45%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 9999990;
+}
+
+.tech_backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tech_panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 380px;
+    max-width: 92vw;
+    background: var(--bg-color);
+    border-left: 1px solid var(--secondary-color);
+    padding: 34px 28px;
+    overflow-y: auto;
+    transform: translateX(102%);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 9999991;
+}
+
+.tech_panel.open {
+    transform: translateX(0);
+}
+
+.tech_panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.tech_panel-title {
+    font-family: Marcellus, serif;
+    font-size: 1.35rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.tech_panel-close {
+    background: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--text-color);
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tech_panel-close:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.tech_panel-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 8px 0 26px;
+}
+
+.tech_group {
+    margin-bottom: 26px;
+}
+
+.tech_group-title {
+    font-family: Marcellus, serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.tech_chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech_chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--secondary-color);
+    padding: 6px 12px;
+    font-size: 0.88rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.tech_chip:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.tech_chip-icon {
+    font-size: 1.05em;
+    flex: 0 0 auto;
 }
 
 @media (max-width: 991.98px) {
