@@ -26,6 +26,42 @@ button.btn.ac_btn:hover {
     pointer-events: none;
 }
 
+/* --- Get in touch: icon channels (no visible address/number) --- */
+
+.ct_channels {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 8px 0 26px;
+}
+
+.ct_channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    width: fit-content;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ct_channel:hover {
+    opacity: 0.65;
+    transform: translateX(4px);
+    text-decoration: none;
+}
+
+.ct_channel-icon {
+    font-size: 22px;
+    flex: 0 0 auto;
+}
+
+.ct_channel-label {
+    font-family: Marcellus, serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
 /* --- Floating success notification with animated check --- */
 
 .ct_success {

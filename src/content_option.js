@@ -297,19 +297,14 @@ const certifications = [{
 },
 ];
 
+// NOTE: email and phone are intentionally NOT stored here in plain text.
+// They are built at runtime in src/utils/contact.js (anti-scraper).
 const contactConfig = {
-    YOUR_EMAIL: "krailynd@vivaldi.net",
-    YOUR_FONE: "+51 907 163 498",
     description: "Available now for Java/backend development work — internships, freelance projects and junior roles. (I'm also training in Data Science & AI, but Java is what I offer today.) Let's talk!",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
 };
 
 const socialprofils = {
-    email: "mailto:krailynd@vivaldi.net",
+    email: "email", // placeholder key — the real mailto is built at runtime (src/utils/contact.js)
     github: "https://github.com/krailynd",
     facebook: "https://www.facebook.com/profile.php?id=61574260263669",
     linkedin: "https://linkedin.com/in/elviscarbajal",
