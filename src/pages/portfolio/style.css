@@ -42,6 +42,22 @@
     opacity: 0.85;
 }
 
+.pf_actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.pf_actions a {
+    text-decoration: none;
+}
+
+.pf_actions .ac_btn {
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
 .pf_media {
     flex: 0 0 430px;
     max-width: 430px;

@@ -38,6 +38,38 @@ export const Portfolio = () => {
                     <div className="pf_info">
                       <h4 className="pf_title">{p.title}</h4>
                       <p className="pf_desc">{p.description}</p>
+                      {(p.github || p.demo) && (
+                        <div className="pf_actions">
+                          {p.github && (
+                            <a
+                              href={p.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div id="button_p" className="ac_btn btn">
+                                GitHub
+                                <div className="ring one"></div>
+                                <div className="ring two"></div>
+                                <div className="ring three"></div>
+                              </div>
+                            </a>
+                          )}
+                          {p.demo && (
+                            <a
+                              href={p.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div id="button_h" className="ac_btn btn">
+                                Live Preview
+                                <div className="ring one"></div>
+                                <div className="ring two"></div>
+                                <div className="ring three"></div>
+                              </div>
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                     <div className="pf_media">
                       {p.img ? (
