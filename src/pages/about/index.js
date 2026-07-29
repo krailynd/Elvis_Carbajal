@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+import { FaFacebookF, FaYoutube } from "react-icons/fa";
+import { XIcon } from "../../components/socialicons";
 import {
   dataabout,
   meta,
@@ -10,6 +12,7 @@ import {
   skills,
   services,
   certifications,
+  socialprofils,
 } from "../../content_option";
 
 export const About = () => {
@@ -120,6 +123,39 @@ export const About = () => {
                 </div>
               );
             })}
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Not Necessary, but Extra</h3>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <div className="about_socials">
+              <a
+                href={socialprofils.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href={socialprofils.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+              >
+                <XIcon />
+              </a>
+              <a
+                href={socialprofils.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </a>
+            </div>
           </Col>
         </Row>
       </Container>

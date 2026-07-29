@@ -9,12 +9,13 @@ import {
   FaInstagram,
   FaSnapchatGhost,
   FaTiktok,
+  FaEnvelope,
   FaCircle
 } from "react-icons/fa";
 import { socialprofils } from "../../content_option";
 
 // X (formerly Twitter) logo — inline SVG so it works with any react-icons version
-const FaX = (props) => (
+export const XIcon = (props) => (
   <svg
     stroke="currentColor"
     fill="currentColor"
@@ -31,14 +32,15 @@ const FaX = (props) => (
 
 const ICON_MAPPING = {
   default: FaCircle,
+  email: FaEnvelope,
   facebook: FaFacebookF,
   github: FaGithub,
   instagram: FaInstagram,
   linkedin: FaLinkedin,
   snapchat: FaSnapchatGhost,
   tiktok: FaTiktok,
-  twitter: FaX,
-  x: FaX,
+  twitter: XIcon,
+  x: XIcon,
   twitch: FaTwitch,
   youtube: FaYoutube
 };
@@ -49,16 +51,22 @@ export const Socialicons = (params) => {
       <ul>
         {Object.entries(socialprofils).map(([platform, url]) => {
           const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
+          const isEmail = platform === "email";
           return (
             <li key={platform}>
-              <a href={url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={url}
+                {...(isEmail
+                  ? { "aria-label": "Send me an email" }
+                  : { target: "_blank", rel: "noopener noreferrer" })}
+              >
                 <IconComponent />
               </a>
             </li>
           );
         })}
       </ul>
-      <p>Follow Me</p>
+      <p>Contact Me</p>
     </div>
   );
 };
