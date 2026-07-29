@@ -17,7 +17,7 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I'm a Systems Engineering and Computing student at Universidad Privada San Juan Bautista (UPSJB, Ica, Peru), focused on software development — with a special love for everything Java — full-stack web applications, and Linux automation. Beyond software, my long-term goal is to become a Data Science & AI engineer/scientist: someone who doesn't just plug APIs together, but understands AI from the inside — training, tuning and evaluating models with scientific rigor. I'm getting there through a structured self-study roadmap that runs in parallel with university: Python and SQL first, mathematics learned through code, then ML, deep learning, and modern AI systems. I've led the development of an educational platform with 31+ interactive physics and math simulators, built desktop apps in Java, and I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I'm producing music and designing digital content — creativity and engineering feed each other in everything I build.",
+    aboutme: "I'm a Systems Engineering and Computing student at Universidad Privada San Juan Bautista (UPSJB, Ica, Peru), focused on software development — with a special love for everything Java — full-stack web applications, and Linux automation. Beyond software, my long-term goal is to become a Data Science & AI engineer/scientist: someone who doesn't just plug APIs together, but understands AI from the inside — training, tuning and evaluating models with scientific rigor. I'm getting there through a structured self-study roadmap that runs in parallel with university: Python and SQL first, mathematics learned through code, then ML, deep learning, and modern AI systems. I've led the development of an educational platform with 31+ interactive physics and math simulators, built desktop apps in Java, and I run my own self-hosted server — SahaCloud — an Ubuntu + Docker homelab serving 10+ applications (cloud storage, chat, documentation, automation, monitoring) behind a reverse proxy and Cloudflare tunnels. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I'm producing music and designing digital content — creativity and engineering feed each other in everything I build.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
@@ -25,14 +25,19 @@ const worktimeline = [{
     date: "05/2025 - Present",
 },
 {
-    jobtitle: "Web Developer (Freelance)",
-    where: "Personal Projects",
-    date: "2024 - 2025",
+    jobtitle: "Homelab & Self-hosted Infrastructure",
+    where: "SahaCloud | sahacloud.dpdns.org — Ubuntu Server, Docker, Caddy, Cloudflare Tunnels",
+    date: "2026 - Present",
 },
 {
     jobtitle: "Software Developer",
     where: "SahaNotes (Beta) & Automation",
     date: "2025 - 03/2026",
+},
+{
+    jobtitle: "Web Developer (Freelance)",
+    where: "Personal Projects",
+    date: "2024 - 2025",
 },
 {
     jobtitle: "Interuniversity Finalist — Innovation Challenge 2026",
@@ -69,15 +74,15 @@ const skills = [{
 },
 {
     name: "Python & SQL",
-    description: "Automation scripts, relational databases (MySQL, MariaDB). Currently deepening toward Pandas, data analysis and ML — the core of my Data Science roadmap.",
+    description: "Automation scripts, relational databases (MySQL, MariaDB, PostgreSQL). Currently deepening toward Pandas, data analysis and ML — the core of my Data Science roadmap.",
 },
 {
     name: "Full-Stack Web",
     description: "JavaScript, TypeScript, PHP, HTML/CSS. Auth (OAuth/JWT), real-time chat and dynamic resource management in production platforms.",
 },
 {
-    name: "Linux & Automation",
-    description: "Ubuntu/WSL, Bash, Nushell, Docker. Scripting to automate daily workflows and manage server environments.",
+    name: "Linux, Servers & Self-hosting",
+    description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
 },
 {
     name: "AI & Ethics",
@@ -91,11 +96,11 @@ const skills = [{
 
 const services = [{
     title: "Software & Web Development",
-    description: "Java desktop apps, full-stack web platforms and APIs with relational databases (MySQL, MariaDB) — from architecture to deployment.",
+    description: "Java desktop apps, full-stack web platforms and APIs with relational databases (MySQL, MariaDB, PostgreSQL) — from architecture to deployment.",
 },
 {
-    title: "Automation & Data Pipelines",
-    description: "Task automation in Linux with Bash, Python and Nushell. Growing into data scraping, cleaning and pipeline building.",
+    title: "Self-hosted Infrastructure & Automation",
+    description: "Ubuntu Server administration, Dockerized services, reverse proxy and secure tunnels (SahaCloud). Task automation in Linux with Bash, Python and Nushell; growing into data scraping and pipeline building.",
 },
 {
     title: "Data & AI — Currently in Training",
@@ -105,8 +110,18 @@ const services = [{
 
 const dataportfolio = [{
     img: "https://picsum.photos/400/?grayscale",
-    description: "SahaHacking: Educational platform & virtual lab with 31+ interactive physics/math simulators. Led a multidisciplinary team; built secure auth (OAuth/JWT), real-time chat and responsive scientific UI.",
+    description: "SahaHacking: Educational platform & virtual lab with 31+ interactive physics/math simulators. Led a multidisciplinary team; built secure auth (OAuth/JWT), real-time chat and responsive scientific UI. Self-hosted on my own server.",
     link: "https://sahahacking.sahacloud.dpdns.org",
+},
+{
+    img: "https://picsum.photos/400/600/?grayscale",
+    description: "SahaCloud: My self-hosted personal cloud — an Ubuntu Server homelab running ~25 Docker containers behind a Caddy reverse proxy and Cloudflare Tunnels: Nextcloud, Mattermost, Outline docs, code-server, n8n automation, Home Assistant, SearXNG and more, across 12+ subdomains.",
+    link: "https://sahacloud.dpdns.org",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "SahaTools: Operations console (FastAPI + Docker) on my SahaCloud server — live service monitoring, utilities and document tools for the whole self-hosted ecosystem.",
+    link: "https://sahatools.sahacloud.dpdns.org",
 },
 {
     img: "https://picsum.photos/400/800/?grayscale",
@@ -125,37 +140,52 @@ const dataportfolio = [{
 },
 {
     img: "https://picsum.photos/400/?grayscale",
+    description: "java-proyects: My Java learning repository — university projects (UPSJB), exercises and mini-apps documenting my progress in the language.",
+    link: "https://github.com/krailynd/java-proyects",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "Java Login: Authentication system built in Java — user management and secure login flows.",
+    link: "https://github.com/krailynd/Java-login",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
     description: "bash-nu-sftp-ssh: Automation toolkit in Bash/Nushell for SFTP/SSH workflows on Linux.",
     link: "https://github.com/krailynd/bash-nu-sftp-ssh",
 },
 {
     img: "https://picsum.photos/400/600/?grayscale",
+    description: "Pages-rycle: Web page with PHP backend and email delivery via PHPMailer — freelance web work.",
+    link: "https://github.com/krailynd/Pages-rycle",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
     description: "[In progress — Data Science Roadmap] Kaggle EDA & first ML models (Titanic, Pandas, feature engineering): the first full data-to-model workflow of my self-study roadmap.",
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "[Planned — Data Science Roadmap] Interactive BI Dashboard (Streamlit / Power BI): business questions answered with live filters — the daily work of a Data Analyst.",
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/800/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
     description: "[Planned — Data Science Roadmap] Telecom Customer Churn Prediction: imbalanced classes, F1/Recall metrics and business storytelling.",
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "[Planned — Data Science Roadmap] Web Scraping + Trend Analysis (Peru): automated data collection pipeline from raw sources to time-series analysis.",
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/600/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
     description: "[Planned — Data Science Roadmap] RAG Chatbot over my own documents: embeddings, vector search and an LLM answering from UPSJB notes.",
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
-    description: "[Planned — Data Science Roadmap] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed). The project that sums up the whole roadmap.",
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "[Planned — Data Science Roadmap] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed on my own server). The project that sums up the whole roadmap.",
     link: "https://github.com/krailynd",
 },
 ];
@@ -197,7 +227,7 @@ const certifications = [{
 const contactConfig = {
     YOUR_EMAIL: "krailynd@vivaldi.net",
     YOUR_FONE: "+51 907 163 498",
-    description: "Open to software development collaborations, data/AI learning projects, internships and research opportunities. Let's build something — reach out!",
+    description: "Open to software development collaborations, self-hosting/homelab talk, data/AI learning projects, internships and research opportunities. Let's build something — reach out!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
