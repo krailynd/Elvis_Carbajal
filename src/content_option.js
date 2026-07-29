@@ -240,6 +240,7 @@ const contactConfig = {
 };
 
 const socialprofils = {
+    email: "mailto:krailynd@vivaldi.net",
     github: "https://github.com/krailynd",
     facebook: "https://www.facebook.com/profile.php?id=61574260263669",
     linkedin: "https://linkedin.com/in/elviscarbajal",
