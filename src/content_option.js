@@ -1,28 +1,38 @@
 const logotext = "KRAILYND";
 const meta = {
     title: "Elvis Carbajal (Krailynd)",
-    description: "I'm Elvis Carbajal, Systems Engineering Student & Software Developer from Ica, Peru.",
+    description: "Systems Engineering student and software developer from Ica, Peru — on a structured path to becoming a Data Science & AI engineer.",
 };
 
 const introdata = {
     title: "I’m Elvis Carbajal",
     animated: {
         first: "Systems Engineering Student",
-        second: "Software Developer",
-        third: "Music Producer & Digital Creator",
+        second: "Software Developer · Java Enthusiast",
+        third: "Aspiring Data Science & AI Engineer",
     },
-    description: "An 18-year-old Systems Engineering and Computing student at UPSJB with a highly analytical and creative profile. Passionate about building robust applications, optimizing minimal computing environments, and designing interactive educational platforms.",
+    description: "Systems Engineering and Computing student at UPSJB (Ica, Peru) building software with Java, Python and full-stack web technologies — while following a structured, self-designed roadmap toward Data Science and AI Engineering. I use AI tools to build faster, but I make sure I understand every line of what ships.",
     your_img_url: "https://i.ibb.co/VYmK2gfZ/Imagen12222.png",
 };
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I am a Systems Engineering and Computing student at Universidad Privada San Juan Bautista (UPSJB) with a highly analytical and creative profile. I specialize in software development, IT support, and automation. Simultaneously, I explore the creative arts as a music producer (focusing on Trap and Reggaeton) and digital content creator.",
+    aboutme: "I'm a Systems Engineering and Computing student at Universidad Privada San Juan Bautista (UPSJB, Ica, Peru), focused on software development — with a special love for everything Java — full-stack web applications, and Linux automation. Beyond software, my long-term goal is to become a Data Science & AI engineer/scientist: someone who doesn't just plug APIs together, but understands AI from the inside — training, tuning and evaluating models with scientific rigor. I'm getting there through a structured self-study roadmap that runs in parallel with university: Python and SQL first, mathematics learned through code, then ML, deep learning, and modern AI systems. I've led the development of an educational platform with 31+ interactive physics and math simulators, built desktop apps in Java, and I run my own self-hosted server — SahaCloud — an Ubuntu + Docker homelab serving 10+ applications (cloud storage, chat, documentation, automation, monitoring) behind a reverse proxy and Cloudflare tunnels. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I'm producing music and designing digital content — creativity and engineering feed each other in everything I build.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
-    where: "SahaHacking | sahahacking.jvledic.com",
-    date: "05/2025",
+    where: "SahaHacking | sahahacking.sahacloud.dpdns.org",
+    date: "05/2025 - Present",
+},
+{
+    jobtitle: "Homelab & Self-hosted Infrastructure",
+    where: "SahaCloud | sahacloud.dpdns.org — Ubuntu Server, Docker, Caddy, Cloudflare Tunnels",
+    date: "2026 - Present",
+},
+{
+    jobtitle: "Software Developer",
+    where: "SahaNotes (Beta) & Automation",
+    date: "2025 - 03/2026",
 },
 {
     jobtitle: "Web Developer (Freelance)",
@@ -30,20 +40,25 @@ const worktimeline = [{
     date: "2024 - 2025",
 },
 {
-    jobtitle: "Software Developer",
-    where: "SahaNotes (Beta) & Automation",
-    date: "03/2026",
+    jobtitle: "Interuniversity Finalist — Innovation Challenge 2026",
+    where: "Team UPSJB · Digital platform for papeleta fractioning optimization",
+    date: "06/2026",
 },
 ];
 
 const education = [{
-    degree: "B.S. in Systems Engineering",
-    where: "Universidad Privada San Juan Bautista (UPSJB)",
+    degree: "B.S. in Systems Engineering and Computing",
+    where: "Universidad Privada San Juan Bautista (UPSJB), Ica, Peru",
     date: "03/2025 - Present",
 },
 {
-    degree: "INGEICA 2025 International Congress",
-    where: "UPSJB Faculty of Engineering",
+    degree: "Self-designed Data Science & AI Roadmap (4 stages)",
+    where: "Kaggle, freeCodeCamp, Coursera, Hugging Face, Karpathy's Zero to Hero",
+    date: "07/2026 - Ongoing",
+},
+{
+    degree: "INGEICA 2025 — 1st Int. Congress of Engineering & AI",
+    where: "UPSJB",
     date: "10/2025",
 },
 {
@@ -55,92 +70,164 @@ const education = [{
 
 const skills = [{
     name: "Java",
-    description: "Intermediate level. Experienced in building robust Java desktop applications and algorithms.",
+    description: "My favorite language. Desktop applications (SahaNotes, SahaCalc), algorithms, OOP and robust software design.",
 },
 {
-    name: "Python, SQL, PHP & TypeScript",
-    description: "Full-Stack Web platforms, relational database management (MySQL, MariaDB).",
+    name: "Python & SQL",
+    description: "Automation scripts, relational databases (MySQL, MariaDB, PostgreSQL). Currently deepening toward Pandas, data analysis and ML — the core of my Data Science roadmap.",
 },
 {
-    name: "HTML, CSS & JavaScript",
-    description: "Creating responsive, modern UI/UX centered on user accessibility and robust interactions.",
+    name: "Full-Stack Web",
+    description: "JavaScript, TypeScript, PHP, HTML/CSS. Auth (OAuth/JWT), real-time chat and dynamic resource management in production platforms.",
 },
 {
-    name: "Linux (WSL/Ubuntu) & Automation",
-    description: "Scripting (Bash, Python, Nushell) to optimize daily tasks in Linux environments.",
+    name: "Linux, Servers & Self-hosting",
+    description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
 },
 {
-    name: "IT Support & Hardware",
-    description: "PC Hardware Troubleshooting, Tinkercad, System Optimization, and complex problem resolution.",
+    name: "AI & Ethics",
+    description: "CITI-certified in AI and Human Subject Protections. AI-assisted development workflow with full code comprehension and review.",
 },
 {
     name: "Design & Audio Production",
-    description: "UI/UX, Affinity, Krita, Canva. Ableton Live and Waves audio plugins for sound production.",
+    description: "UI/UX, Affinity, Krita, Aseprite, Canva. Ableton Live for music production — the creative side of my engineering.",
 },
 ];
 
 const services = [{
     title: "Software & Web Development",
-    description: "Development using Java, Python, SQL, JS, PHP, TypeScript. Web pages and relational databases (MySQL, MariaDB), focusing on interactive apps.",
+    description: "Java desktop apps, full-stack web platforms and APIs with relational databases (MySQL, MariaDB, PostgreSQL) — from architecture to deployment.",
 },
 {
-    title: "IT Support & Automation",
-    description: "Task optimization in Linux environments with Bash, Python, and Nushell. PC support, tinkercad, and complex problem resolution.",
+    title: "Self-hosted Infrastructure & Automation",
+    description: "Ubuntu Server administration, Dockerized services, reverse proxy and secure tunnels (SahaCloud). Task automation in Linux with Bash, Python and Nushell; growing into data scraping and pipeline building.",
 },
 {
-    title: "Audio, Video & Design",
-    description: "Music production (Ableton Live, Cubase). Video editing in DaVinci Resolve. Graphic design with Affinity, Krita, Aseprite, and Canva.",
+    title: "Data & AI — Currently in Training",
+    description: "Not a data scientist yet — actively learning through a structured self-study roadmap and building my first data analysis and ML projects: Kaggle competitions, dashboards and applied AI. Progress is public on GitHub.",
 },
 ];
 
 const dataportfolio = [{
     img: "https://picsum.photos/400/?grayscale",
-    description: "SahaHacking (sahahacking.jvledic.com): Educational innovation hub and cybersecurity lab with 31+ interactive physics/math simulators.",
-    link: "http://sahahacking.jvledic.com",
-},
-{
-    img: "https://picsum.photos/400/800/?grayscale",
-    description: "SahaCalc: Interactive, web-based physics simulation platform designed to help students learn complex topics.",
-    link: "#",
-},
-{
-    img: "https://picsum.photos/400/?grayscale",
-    description: "SahaNotes (Beta): A dynamic, personalized markdown-based notepad application developed in Java. Hosted on GitHub.",
-    link: "#",
+    description: "SahaHacking: Educational platform & virtual lab with 31+ interactive physics/math simulators. Led a multidisciplinary team; built secure auth (OAuth/JWT), real-time chat and responsive scientific UI. Self-hosted on my own server.",
+    link: "https://sahahacking.sahacloud.dpdns.org",
 },
 {
     img: "https://picsum.photos/400/600/?grayscale",
-    description: "Inventory Systems: Full-stack personal projects involving the design of dynamic web pages and relational databases.",
-    link: "#",
+    description: "SahaCloud: My self-hosted personal cloud — an Ubuntu Server homelab running ~25 Docker containers behind a Caddy reverse proxy and Cloudflare Tunnels: Nextcloud, Mattermost, Outline docs, code-server, n8n automation, Home Assistant, SearXNG and more, across 12+ subdomains.",
+    link: "https://sahacloud.dpdns.org",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "SahaTools: Operations console (FastAPI + Docker) on my SahaCloud server — live service monitoring, utilities and document tools for the whole self-hosted ecosystem.",
+    link: "https://sahatools.sahacloud.dpdns.org",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "SahaNotes (Beta): A dynamic markdown-based notepad desktop application built in Java.",
+    link: "https://github.com/krailynd/SahaNotes",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "SahaCalc: Java calculator + graphing tool for math functions.",
+    link: "https://github.com/krailynd/SahaCalc",
+},
+{
+    img: "https://picsum.photos/400/600/?grayscale",
+    description: "Saha Inventory API: REST API for inventory management built in Java, with relational database design.",
+    link: "https://github.com/krailynd/Saha-API-inventario",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "java-proyects: My Java learning repository — university projects (UPSJB), exercises and mini-apps documenting my progress in the language.",
+    link: "https://github.com/krailynd/java-proyects",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "Java Login: Authentication system built in Java — user management and secure login flows.",
+    link: "https://github.com/krailynd/Java-login",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "bash-nu-sftp-ssh: Automation toolkit in Bash/Nushell for SFTP/SSH workflows on Linux.",
+    link: "https://github.com/krailynd/bash-nu-sftp-ssh",
+},
+{
+    img: "https://picsum.photos/400/600/?grayscale",
+    description: "Pages-rycle: Web page with PHP backend and email delivery via PHPMailer — freelance web work.",
+    link: "https://github.com/krailynd/Pages-rycle",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "[In progress — Data Science Roadmap] Kaggle EDA & first ML models (Titanic, Pandas, feature engineering): the first full data-to-model workflow of my self-study roadmap.",
+    link: "https://github.com/krailynd",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "[Planned — Data Science Roadmap] Interactive BI Dashboard (Streamlit / Power BI): business questions answered with live filters — the daily work of a Data Analyst.",
+    link: "https://github.com/krailynd",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "[Planned — Data Science Roadmap] Telecom Customer Churn Prediction: imbalanced classes, F1/Recall metrics and business storytelling.",
+    link: "https://github.com/krailynd",
+},
+{
+    img: "https://picsum.photos/400/600/?grayscale",
+    description: "[Planned — Data Science Roadmap] Web Scraping + Trend Analysis (Peru): automated data collection pipeline from raw sources to time-series analysis.",
+    link: "https://github.com/krailynd",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
+    description: "[Planned — Data Science Roadmap] RAG Chatbot over my own documents: embeddings, vector search and an LLM answering from UPSJB notes.",
+    link: "https://github.com/krailynd",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
+    description: "[Planned — Data Science Roadmap] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed on my own server). The project that sums up the whole roadmap.",
+    link: "https://github.com/krailynd",
 },
 ];
 
 const certifications = [{
     title: "Artificial Intelligence (AI) and Human Subject Protections",
-    description: "CITI Program - Technical certification on AI and ethical protection of human subjects.",
-},
-{
-    title: "Best Practices for Global Research Partnerships",
-    description: "CITI Program (03/2026) - Specialized in best practices, benefits, and challenges.",
-},
-{
-    title: "A Beginner’s Guide to Being a Sponsor-Investigator",
-    description: "CITI Program (05/2025) - Fundamentals of leading and managing academic research projects.",
+    description: "CITI Program — AI and ethical protection of human subjects in digital environments.",
 },
 {
     title: "Responsible Conduct of Research for Engineers",
-    description: "CITI Program (05/2025) - Training in ethical and responsible research conduct.",
+    description: "CITI Program (05/2025) — Ethical and responsible research conduct for engineering.",
+},
+{
+    title: "Best Practices for Global Research Partnerships",
+    description: "CITI Program (03/2026) — Global research collaboration best practices.",
+},
+{
+    title: "A Beginner’s Guide to Being a Sponsor-Investigator",
+    description: "CITI Program (05/2025) — Leading and managing academic research projects.",
 },
 {
     title: "Bring Your Own Device (BYOD) Studies",
-    description: "CITI Program (05/2025) - Best practices for implementing BYOD technical studies.",
+    description: "CITI Program (05/2025) — Best practices for BYOD technical studies.",
+},
+{
+    title: "Applied AI to Science Workshop",
+    description: "UPSJB (05/2025) — Hands-on workshop on AI applied to scientific work.",
+},
+{
+    title: "Yachaywasi Net 2026 — AI & Digital Transformation",
+    description: "UPSJB (06/2026) — Innovation and new technologies.",
+},
+{
+    title: "YACHAYHUASI — Smart Tourism & Strategic Communication",
+    description: "UPSJB (06/2026) — Digital transformation and sustainable management.",
 },
 ];
 
 const contactConfig = {
     YOUR_EMAIL: "krailynd@vivaldi.net",
     YOUR_FONE: "+51 907 163 498",
-    description: "Feel free to reach out for software development collaborations, IT support queries, or music production projects. Excited to connect!",
+    description: "Open to software development collaborations, self-hosting/homelab talk, data/AI learning projects, internships and research opportunities. Let's build something — reach out!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
