@@ -13,6 +13,7 @@ import {
   FaCircle
 } from "react-icons/fa";
 import { socialprofils } from "../../content_option";
+import { getMailto } from "../../utils/contact";
 
 // X (formerly Twitter) logo — inline SVG so it works with any react-icons version
 export const XIcon = (props) => (
@@ -60,7 +61,7 @@ export const Socialicons = (params) => {
             return (
               <li key={platform}>
                 <a
-                  href={url}
+                  href={isEmail ? getMailto() : url}
                   {...(isEmail
                     ? { "aria-label": "Send me an email" }
                     : { target: "_blank", rel: "noopener noreferrer" })}
