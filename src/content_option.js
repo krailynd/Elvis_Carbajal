@@ -1,23 +1,23 @@
 const logotext = "KRAILYND";
 const meta = {
     title: "Elvis Carbajal (Krailynd)",
-    description: "Systems Engineering student and software developer from Ica, Peru — on a structured path to becoming a Data Science & AI engineer.",
+    description: "Systems Engineering student from Ica, Peru, training toward Data Analysis and Data Science/AI — with shipped software and a self-hosted server as proof I build things that work.",
 };
 
 const introdata = {
     title: "I’m Elvis Carbajal",
     animated: {
-        first: "Systems Engineering Student",
-        second: "Software Developer · Java Enthusiast",
-        third: "Aspiring Data Science & AI Engineer",
+        first: "Aspiring Data Analyst",
+        second: "Future Data Science & AI Engineer",
+        third: "Software & Java Background",
     },
-    description: "Systems Engineering and Computing student at UPSJB (Ica, Peru) building software with Java, Python and full-stack web technologies — while following a structured, self-designed roadmap toward Data Science and AI Engineering. I use AI tools to build faster, but I make sure I understand every line of what ships.",
+    description: "Systems Engineering student (UPSJB, Ica, Peru) on a structured path into data: Python, SQL and statistics first, then Machine Learning and AI Engineering. My shipped software projects and my own self-hosted server are the proof that I learn by building — and I'm now channeling that into data analysis, dashboards and ML. Goal: a first role as a Data Analyst / Data Science trainee.",
     your_img_url: "https://i.ibb.co/VYmK2gfZ/Imagen12222.png",
 };
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I'm a Systems Engineering and Computing student at Universidad Privada San Juan Bautista (UPSJB, Ica, Peru), focused on software development — with a special love for everything Java — full-stack web applications, and Linux automation. Beyond software, my long-term goal is to become a Data Science & AI engineer/scientist: someone who doesn't just plug APIs together, but understands AI from the inside — training, tuning and evaluating models with scientific rigor. I'm getting there through a structured self-study roadmap that runs in parallel with university: Python and SQL first, mathematics learned through code, then ML, deep learning, and modern AI systems. I've led the development of an educational platform with 31+ interactive physics and math simulators, built desktop apps in Java, and I run my own self-hosted server — SahaCloud — an Ubuntu + Docker homelab serving 10+ applications (cloud storage, chat, documentation, automation, monitoring) behind a reverse proxy and Cloudflare tunnels. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I'm producing music and designing digital content — creativity and engineering feed each other in everything I build.",
+    aboutme: "I'm training to become a Data Scientist — and long-term, an AI engineer/scientist who understands AI from the inside: training, tuning and evaluating models with scientific rigor. My way in is the proven ladder: Data Analyst first, then Data Scientist, then ML Engineer. My foundation is software: I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru) who has already shipped real products — an educational platform with 31+ interactive physics/math simulators, Java desktop apps, REST APIs — and I run my own self-hosted server, SahaCloud, with Dockerized services, databases and automation. That background feeds directly into data work: I already handle SQL and relational databases, Python scripting, Linux and taking projects from raw idea to production. Right now I'm deep into Python for data analysis, SQL, statistics and classical ML through a structured self-study roadmap, with my progress public on GitHub. I'm CITI-certified in AI ethics and responsible research. When I'm not studying or coding, I produce music and design digital content — creativity and engineering feed each other in everything I build.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
@@ -69,12 +69,16 @@ const education = [{
 ];
 
 const skills = [{
-    name: "Java",
-    description: "My favorite language. Desktop applications (SahaNotes, SahaCalc), algorithms, OOP and robust software design.",
+    name: "Python & SQL",
+    description: "The core of my data path: Python scripting and relational databases (MySQL, MariaDB, PostgreSQL). Currently deepening into Pandas, data analysis and ML through my roadmap.",
 },
 {
-    name: "Python & SQL",
-    description: "Automation scripts, relational databases (MySQL, MariaDB, PostgreSQL). Currently deepening toward Pandas, data analysis and ML — the core of my Data Science roadmap.",
+    name: "Data & Analytics — In Training",
+    description: "Data cleaning, EDA, statistics and visualization. Practicing on Kaggle with a structured self-study plan; dashboards and BI are my next deliverables.",
+},
+{
+    name: "Java",
+    description: "My favorite language. Desktop applications (SahaNotes, SahaCalc), algorithms, OOP and robust software design — my engineering foundation.",
 },
 {
     name: "Full-Stack Web",
@@ -85,8 +89,8 @@ const skills = [{
     description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
 },
 {
-    name: "AI & Ethics",
-    description: "CITI-certified in AI and Human Subject Protections. AI-assisted development workflow with full code comprehension and review.",
+    name: "AI & Research Ethics",
+    description: "CITI-certified in AI and Human Subject Protections and Responsible Conduct of Research — the scientific rigor side of my data/AI goal.",
 },
 {
     name: "Design & Audio Production",
@@ -95,16 +99,16 @@ const skills = [{
 ];
 
 const services = [{
-    title: "Software & Web Development",
-    description: "Java desktop apps, full-stack web platforms and APIs with relational databases (MySQL, MariaDB, PostgreSQL) — from architecture to deployment.",
+    title: "Data Analysis — Currently in Training",
+    description: "Targeting entry-level Data Analyst / Data Science trainee roles: SQL queries, data cleaning, EDA, honest metrics and dashboards. Progress is public on GitHub.",
 },
 {
-    title: "Self-hosted Infrastructure & Automation",
-    description: "Ubuntu Server administration, Dockerized services, reverse proxy and secure tunnels (SahaCloud). Task automation in Linux with Bash, Python and Nushell; growing into data scraping and pipeline building.",
+    title: "Data Pipelines & Automation",
+    description: "Web scraping, data collection and scheduled automation in Linux (Bash, Python, Nushell) — my bridge from automation background toward data engineering basics.",
 },
 {
-    title: "Data & AI — Currently in Training",
-    description: "Not a data scientist yet — actively learning through a structured self-study roadmap and building my first data analysis and ML projects: Kaggle competitions, dashboards and applied AI. Progress is public on GitHub.",
+    title: "Software Development — Supporting Skill",
+    description: "Java desktop apps, APIs and full-stack web with relational databases: the engineering foundation that lets me ship data products end-to-end, not just notebooks.",
 },
 ];
 
@@ -227,7 +231,7 @@ const certifications = [{
 const contactConfig = {
     YOUR_EMAIL: "krailynd@vivaldi.net",
     YOUR_FONE: "+51 907 163 498",
-    description: "Open to software development collaborations, self-hosting/homelab talk, data/AI learning projects, internships and research opportunities. Let's build something — reach out!",
+    description: "Looking for internships and entry-level opportunities in Data Analysis / Data Science — and always open to software collaborations and homelab talk. Let's connect!",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
