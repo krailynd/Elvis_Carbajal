@@ -13,13 +13,14 @@
 .pf_list {
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 46px;
 }
 
 .pf_row {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    gap: 40px;
+    gap: 44px;
 }
 
 .pf_info {
@@ -29,21 +30,21 @@
 
 .pf_title {
     font-family: Marcellus, serif;
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     margin-bottom: 12px;
     color: var(--text-color);
 }
 
 .pf_desc {
-    font-size: 0.95rem;
-    line-height: 1.55;
+    font-size: 0.97rem;
+    line-height: 1.6;
     margin: 0;
     opacity: 0.85;
 }
 
 .pf_media {
-    flex: 0 0 340px;
-    max-width: 340px;
+    flex: 0 0 430px;
+    max-width: 430px;
     position: relative;
     border: 1px solid var(--secondary-color);
     overflow: hidden;
@@ -124,6 +125,6 @@
     .pf_media {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 480px;
+        max-width: 520px;
     }
 }
