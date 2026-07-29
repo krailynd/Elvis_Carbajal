@@ -17,12 +17,17 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I'm a Software Developer and I specialize in Java — the language I know deepest and enjoy most. I build backend services with Spring Boot, design and implement REST APIs, and work with relational databases (PostgreSQL, MySQL, MariaDB). I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru), and I've already shipped real products: an educational platform with 31+ interactive physics/math simulators, Java desktop apps (SahaNotes, SahaCalc), an inventory REST API, and I run my own self-hosted server — SahaCloud — with Dockerized services behind a reverse proxy and Cloudflare tunnels. Separately — and I want to be transparent about this — I'm in training toward Data Science & AI through a structured self-study roadmap that runs in parallel with my work and studies. That's my long-term direction, not my current job title: what I offer today is solid Java and backend development. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I produce music and design digital content.",
+    aboutme: "I'm a Software Developer and I specialize in Java — the language I know deepest and enjoy most. I build backend services with Spring Boot, design and implement REST APIs, and work with relational databases (PostgreSQL, MySQL, MariaDB). I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru), and I've already shipped real products: an educational platform with 31+ interactive physics/math simulators, Java desktop apps (SahaNotes, SahaCalc), an inventory REST API, an open-source Rust terminal file manager (Open-SahaDisk, from my SahaHacking org), and I run my own self-hosted server — SahaCloud — with Dockerized services behind a reverse proxy and Cloudflare tunnels. Separately — and I want to be transparent about this — I'm in training toward Data Science & AI through a structured self-study roadmap that runs in parallel with my work and studies. That's my long-term direction, not my current job title: what I offer today is solid Java and backend development. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I produce music and design digital content.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
     where: "SahaHacking | sahahacking.sahacloud.dpdns.org",
     date: "05/2025 - Present",
+},
+{
+    jobtitle: "Founder & Lead Developer — Open Source",
+    where: "SahaHacking Org | Open-SahaDisk — Rust terminal file manager & disk analyzer",
+    date: "2026 - Present",
 },
 {
     jobtitle: "Homelab & Self-hosted Infrastructure",
@@ -33,6 +38,11 @@ const worktimeline = [{
     jobtitle: "Software Developer",
     where: "SahaNotes (Beta) & Automation",
     date: "2025 - 03/2026",
+},
+{
+    jobtitle: "Frontend Developer (Freelance)",
+    where: "JVLEDIC ELECTRIC S.A.C | jvledic.com — ed-tech corporate website",
+    date: "2025",
 },
 {
     jobtitle: "Web Developer (Freelance)",
@@ -85,12 +95,20 @@ const skills = [{
     description: "I run SahaCloud, my own Ubuntu Server: Docker containers, Caddy reverse proxy, Cloudflare Tunnels, Tailscale, Bash/Nushell automation and basic server administration.",
 },
 {
+    name: "Rust & Open Source",
+    description: "Open-SahaDisk (SahaHacking org): a cross-platform terminal file manager in Rust — TUI with ratatui, background scanning, Docker integration and defensive-by-default design. MIT licensed.",
+},
+{
     name: "Data & AI — In Training",
     description: "Python, Pandas and statistics through a structured self-study roadmap (Kaggle, freeCodeCamp). My long-term formation — public progress on GitHub.",
 },
 {
     name: "AI & Research Ethics",
     description: "CITI-certified in AI and Human Subject Protections and Responsible Conduct of Research.",
+},
+{
+    name: "Soft Skills",
+    description: "Team leadership (led a multidisciplinary team on SahaHacking), clear technical communication with clients (JVLEDIC), self-directed learning, adaptability across stacks, and ownership — I run what I build.",
 },
 {
     name: "Design & Audio Production",
@@ -119,46 +137,56 @@ const dataportfolio = [{
 },
 {
     img: "https://picsum.photos/400/600/?grayscale",
+    description: "Open-SahaDisk: Open-source terminal file manager & disk-usage analyzer in Rust (Linux/macOS/Windows) — safe file operations with pre-flight risk assessment, background folder sizing, integrated Docker manager, cleanup engine and doctor diagnostics. First open-source project of my SahaHacking org (MIT).",
+    link: "https://github.com/sahahacking/open-sahadisk",
+},
+{
+    img: "https://picsum.photos/400/?grayscale",
     description: "SahaCloud: My self-hosted personal cloud — an Ubuntu Server homelab running ~25 Docker containers behind a Caddy reverse proxy and Cloudflare Tunnels: Nextcloud, Mattermost, Outline docs, code-server, n8n automation, Home Assistant, SearXNG and more, across 12+ subdomains.",
     link: "https://sahacloud.dpdns.org",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "SahaTools: Operations console (FastAPI + Docker) on my SahaCloud server — live service monitoring, utilities and document tools for the whole self-hosted ecosystem.",
     link: "https://sahatools.sahacloud.dpdns.org",
 },
 {
-    img: "https://picsum.photos/400/800/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
     description: "Saha Inventory API: REST API for inventory management built in Java, with relational database design.",
     link: "https://github.com/krailynd/Saha-API-inventario",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "Java Login: Authentication system built in Java — user management and secure login flows.",
     link: "https://github.com/krailynd/Java-login",
 },
 {
-    img: "https://picsum.photos/400/600/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
     description: "SahaNotes (Beta): A dynamic markdown-based notepad desktop application built in Java.",
     link: "https://github.com/krailynd/SahaNotes",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "SahaCalc: Java calculator + graphing tool for math functions.",
     link: "https://github.com/krailynd/SahaCalc",
 },
 {
-    img: "https://picsum.photos/400/800/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
     description: "java-proyects: My Java learning repository — university projects (UPSJB), exercises and mini-apps documenting my progress in the language.",
     link: "https://github.com/krailynd/java-proyects",
 },
 {
-    img: "https://picsum.photos/400/?grayscale",
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "bash-nu-sftp-ssh: Automation toolkit in Bash/Nushell for SFTP/SSH workflows on Linux.",
     link: "https://github.com/krailynd/bash-nu-sftp-ssh",
 },
 {
-    img: "https://picsum.photos/400/600/?grayscale",
+    img: "https://picsum.photos/400/?grayscale",
+    description: "JVLEDIC ELECTRIC S.A.C (jvledic.com): Corporate website frontend for a Peruvian ed-tech company — educational robotics, AI & programming courses, STEAM programs, official distributor catalog, blog, quote flows and certifications pages.",
+    link: "https://jvledic.com",
+},
+{
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "Pages-rycle: Web page with PHP backend and email delivery via PHPMailer — freelance web work.",
     link: "https://github.com/krailynd/Pages-rycle",
 },
@@ -168,7 +196,7 @@ const dataportfolio = [{
     link: "https://github.com/krailynd/titanic-eda-kaggle",
 },
 {
-    img: "https://picsum.photos/400/800/?grayscale",
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "[Planned — Data Science formation] Interactive BI Dashboard (Streamlit / Power BI): business questions answered with live filters — the daily work of a Data Analyst.",
     link: "https://github.com/krailynd",
 },
@@ -178,7 +206,7 @@ const dataportfolio = [{
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/600/?grayscale",
+    img: "https://picsum.photos/400/800/?grayscale",
     description: "[Planned — Data Science formation] Web Scraping + Trend Analysis (Peru): automated data collection pipeline from raw sources to time-series analysis.",
     link: "https://github.com/krailynd",
 },
@@ -188,7 +216,7 @@ const dataportfolio = [{
     link: "https://github.com/krailynd",
 },
 {
-    img: "https://picsum.photos/400/800/?grayscale",
+    img: "https://picsum.photos/400/600/?grayscale",
     description: "[Planned — Data Science formation] Flagship: Peruvian Data Solution End-to-End (INEI/BCRP data → model → FastAPI → deployed on my own server).",
     link: "https://github.com/krailynd",
 },
