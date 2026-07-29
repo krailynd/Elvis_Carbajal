@@ -104,8 +104,8 @@ section {
 }
 
 .intro-photo {
-    width: 400px;
-    max-width: 76%;
+    width: 470px;
+    max-width: 84%;
     aspect-ratio: 4 / 5;
     height: auto;
     border-radius: 26px;
@@ -138,7 +138,7 @@ section {
         margin-bottom: 30px;
     }
     .intro-photo {
-        max-width: 72vw;
+        max-width: 76vw;
     }
 }
 
