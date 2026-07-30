@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -20,6 +20,32 @@ export const About = () => {
     socialprofils,
   } = content;
 
+  const lineFillRef = useRef(null);
+
+  useEffect(() => {
+    let raf = null;
+    const update = () => {
+      raf = null;
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 1;
+      if (lineFillRef.current) {
+        lineFillRef.current.style.transform = `scaleY(${p})`;
+      }
+    };
+    const onScroll = () => {
+      if (raf == null) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf != null) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -28,6 +54,9 @@ export const About = () => {
           <title> {t.about.title} | {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
+        <div className="about_line" aria-hidden="true">
+          <div className="about_line__fill" ref={lineFillRef} />
+        </div>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
             <h1 className="display-4 mb-4">{t.about.title}</h1>
