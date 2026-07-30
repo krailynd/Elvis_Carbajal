@@ -1,7 +1,15 @@
 /* --- Portfolio: sectioned list, 16:9 media, hover links --- */
 
+.pf_page {
+    padding-bottom: 40px;
+}
+
 .pf_section {
     margin-bottom: calc(3rem + 3vw);
+}
+
+.pf_section:last-of-type {
+    margin-bottom: 24px;
 }
 
 .pf_section-title {

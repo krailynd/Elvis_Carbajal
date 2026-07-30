@@ -3,6 +3,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+import ScrollCue from "../../components/scrollcue";
 import { useLang } from "../../i18n";
 
 export const Home = () => {
@@ -69,10 +70,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <Link to="/portfolio" className="home_cue" aria-label={t.home.cueAria}>
-          <span className="home_cue__arrow" aria-hidden="true" />
-          <span className="home_cue__text">{t.home.cue}</span>
-        </Link>
+        <ScrollCue to="/portfolio" label={t.nav.projects} fixed />
       </section>
     </HelmetProvider>
   );

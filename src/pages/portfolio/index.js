@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaGithub, FaExternalLinkAlt, FaLaptopCode, FaTimes } from "react-icons/fa";
 import { getTechIcon, getTechUrl, TECH_CATEGORY_ORDER } from "../../utils/techicons";
+import ScrollCue from "../../components/scrollcue";
 import { useLang } from "../../i18n";
 
 export const Portfolio = () => {
@@ -27,7 +28,7 @@ export const Portfolio = () => {
 
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header pf_page">
         <Helmet>
           <meta charSet="utf-8" />
           <title> {t.portfolio.title} | {meta.title} </title>{" "}
@@ -140,6 +141,7 @@ export const Portfolio = () => {
             </section>
           );
         })}
+        <ScrollCue to="/about" label={t.nav.about} />
       </Container>
 
       {/* Floating side panel: languages & tech of the selected project */}
