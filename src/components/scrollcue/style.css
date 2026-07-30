@@ -70,7 +70,11 @@
 }
 
 @media (max-width: 991.98px) {
+    /* Mobile hero has auto height: place the cue in normal flow, well
+       below the CTA buttons, instead of pinning it to the section bottom */
     .scroll_cue--fixed {
-        bottom: 22px;
+        position: static;
+        transform: none;
+        margin: 30px auto 40px;
     }
 }
