@@ -28,18 +28,36 @@ export const About = () => {
 
   // Measure each section title's vertical center (relative to the container)
   useEffect(() => {
+    const c = containerRef.current;
+    if (!c) return;
     const measure = () => {
-      const c = containerRef.current;
-      if (!c) return;
       const tops = Array.from(c.querySelectorAll("h3.color_sec")).map(
         (el) => el.offsetTop + el.offsetHeight / 2 - 1
       );
-      branchTopsRef.current = tops;
-      setBranchTops(tops);
+      const prev = branchTopsRef.current;
+      const same =
+        prev.length === tops.length &&
+        prev.every((v, i) => Math.abs(v - tops[i]) < 1);
+      if (!same) {
+        branchTopsRef.current = tops;
+        setBranchTops(tops);
+      }
     };
     measure();
+    // Re-measure whenever layout shifts: images loading, font swap,
+    // window resize, full page load — keeps arrows pointed at titles.
+    const ro = new ResizeObserver(measure);
+    ro.observe(c);
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    window.addEventListener("load", measure);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measure);
+    }
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("load", measure);
+    };
   }, [lang]);
 
   // Scroll-driven fill + branch activation
