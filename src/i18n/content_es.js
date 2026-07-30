@@ -3,7 +3,7 @@ import { socialprofils, logotext } from "../content_option";
 
 const meta = {
     title: "Elvis Carbajal (Krailynd)",
-    description: "Desarrollador de Software Java de Ica, Perú — Spring Boot, APIs REST, MySQL/PostgreSQL. Disponible para trabajar. También en formación en Ciencia de Datos e IA.",
+    description: "Desarrollador de Software de Ica, Perú — 2 años construyendo aplicaciones que resuelven problemas reales. Especialista en Java y Spring Boot, diseño UI/UX. Disponible para trabajar. También en formación en Ciencia de Datos e IA.",
 };
 
 const introdata = {
@@ -13,13 +13,13 @@ const introdata = {
         second: "Spring Boot · APIs REST · Bases de Datos SQL",
         third: "Ciencia de Datos e IA — En Formación",
     },
-    description: "Desarrollador de Software Java de Ica, Perú — disponible para pasantías, proyectos freelance y roles junior. Me especializo en Java y su ecosistema: Spring Boot, diseño de APIs REST y bases de datos relacionales (PostgreSQL, MySQL, MariaDB). Por separado, sigo un roadmap estructurado de autoestudio hacia Ciencia de Datos e IA — esa es mi formación a largo plazo, pública en GitHub. Lo que ofrezco hoy es desarrollo sólido en Java/backend.",
+    description: "Desarrollador de Software de Ica, Perú con 2 años de experiencia construyendo aplicaciones que resuelven problemas reales — disponible para trabajar: proyectos freelance, tiempo completo o medio tiempo, lo que venga. Me especializo en Java y su ecosistema: Spring Boot, diseño de APIs REST y bases de datos relacionales (PostgreSQL, MySQL, MariaDB) — y también diseño UI/UX. Por separado, sigo un roadmap estructurado de autoestudio hacia Ciencia de Datos e IA — esa es mi formación a largo plazo, pública en GitHub.",
     your_img_url: "https://i.ibb.co/VYmK2gfZ/Imagen12222.png",
 };
 
 const dataabout = {
     title: "Un poco sobre mí",
-    aboutme: "Soy Desarrollador de Software y me especializo en Java — el lenguaje que más domino y que más disfruto. Construyo servicios backend con Spring Boot, diseño e implemento APIs REST y trabajo con bases de datos relacionales (PostgreSQL, MySQL, MariaDB). Soy estudiante de Ingeniería de Sistemas y Computación en la UPSJB (Ica, Perú), y ya he lanzado productos reales: una plataforma educativa con más de 31 simuladores interactivos de física y matemáticas, aplicaciones de escritorio en Java (SahaNotes, SahaCalc), una API REST de inventario, un gestor de archivos de terminal open-source en Rust (Open-SahaDisk, de mi organización SahaHacking), y administro mi propio servidor auto-hospedado — SahaCloud — con servicios en Docker detrás de un reverse proxy y túneles de Cloudflare. Por separado — y quiero ser transparente sobre esto — estoy en formación hacia Ciencia de Datos e IA a través de un roadmap estructurado de autoestudio que avanza en paralelo con mi trabajo y estudios. Esa es mi dirección a largo plazo, no mi título actual: lo que ofrezco hoy es desarrollo sólido en Java y backend. Estoy certificado por CITI en ética de IA e investigación responsable. Cuando no estoy programando, produzco música y diseño contenido digital.",
+    aboutme: "Soy Desarrollador de Software con 2 años de experiencia construyendo aplicaciones que resuelven problemas reales, y me especializo en Java — el lenguaje que más domino y que más disfruto. Construyo servicios backend con Spring Boot, diseño e implemento APIs REST, trabajo con bases de datos relacionales (PostgreSQL, MySQL, MariaDB) y diseño UI/UX — interfaces claras, usables y construidas con intención. Soy estudiante de Ingeniería de Sistemas y Computación en la UPSJB (Ica, Perú), y ya he lanzado productos reales: una plataforma educativa con más de 31 simuladores interactivos de física y matemáticas, aplicaciones de escritorio en Java (SahaNotes, SahaCalc), una API REST de inventario, un gestor de archivos de terminal open-source en Rust (Open-SahaDisk, de mi organización SahaHacking), y administro mi propio servidor auto-hospedado — SahaCloud — con servicios en Docker detrás de un reverse proxy y túneles de Cloudflare. Por separado — y quiero ser transparente sobre esto — estoy en formación hacia Ciencia de Datos e IA a través de un roadmap estructurado de autoestudio que avanza en paralelo con mi trabajo y estudios. Esa es mi dirección a largo plazo, no mi título actual: lo que ofrezco hoy es desarrollo sólido en Java y backend, además de diseño UI/UX. Estoy certificado por CITI en ética de IA e investigación responsable. Cuando no estoy programando, produzco música y diseño contenido digital.",
 };
 
 const worktimeline = [{
@@ -107,6 +107,11 @@ const skills = [{
     icons: ["Rust", "Docker", "Linux"],
 },
 {
+    name: "Diseño UI/UX",
+    description: "Diseño de interfaces y experiencias para web y escritorio: layouts responsive, sistemas de diseño y flujos de usuario construidos con intención — el mismo cuidado que puse en este portafolio. Affinity, Krita, Aseprite y Canva.",
+    icons: ["Canva", "Aseprite"],
+},
+{
     name: "Datos e IA — En Formación",
     description: "Python, Pandas y estadística a través de un roadmap estructurado de autoestudio (Kaggle, freeCodeCamp). Mi formación a largo plazo — progreso público en GitHub.",
     icons: ["Python", "Pandas", "Jupyter"],
@@ -128,11 +133,11 @@ const skills = [{
 
 const services = [{
     title: "Desarrollo Backend Java — Disponible",
-    description: "Servicios con Spring Boot, diseño e implementación de APIs REST y bases de datos relacionales (PostgreSQL, MySQL, MariaDB). Disponible para pasantías, proyectos freelance y roles junior.",
+    description: "Servicios con Spring Boot, diseño e implementación de APIs REST y bases de datos relacionales (PostgreSQL, MySQL, MariaDB). 2 años de experiencia construyendo aplicaciones que resuelven problemas reales — disponible para proyectos freelance y roles de tiempo completo o medio tiempo, lo que venga.",
 },
 {
-    title: "Apps de Escritorio y Automatización",
-    description: "Aplicaciones de escritorio en Java, scripting y automatización en Linux (Bash, Python, Nushell), y despliegue/self-hosting en mi propia infraestructura de servidores.",
+    title: "Apps de Escritorio, UI/UX y Automatización",
+    description: "Aplicaciones de escritorio en Java, diseño UI/UX para web y escritorio, scripting y automatización en Linux (Bash, Python, Nushell), y despliegue/self-hosting en mi propia infraestructura de servidores.",
 },
 {
     title: "Datos e IA — En Formación (aún no disponible)",
@@ -391,7 +396,7 @@ const certifications = [{
 ];
 
 const contactConfig = {
-    description: "Disponible ahora para trabajo de desarrollo Java/backend — pasantías, proyectos freelance y roles junior. (También estoy en formación en Ciencia de Datos e IA, pero Java es lo que ofrezco hoy.) ¡Hablemos!",
+    description: "Disponible ahora para trabajar — proyectos freelance, tiempo completo o medio tiempo, lo que venga. Java es mi especialidad, y también diseño UI/UX. (También estoy en formación en Ciencia de Datos e IA, pero Java es lo que ofrezco hoy.) ¡Hablemos!",
 };
 
 export {
