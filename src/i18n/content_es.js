@@ -364,34 +364,42 @@ const dataportfolio = [
 const certifications = [{
     title: "Inteligencia Artificial (IA) y Protección de Sujetos Humanos",
     description: "CITI Program — IA y protección ética de sujetos humanos en entornos digitales.",
+    link: "https://www.citiprogram.org/verify/?wc54fbdbb-ac57-44e4-b3dc-62bc362a69f0-69450114",
 },
 {
     title: "Conducta Responsable de Investigación para Ingenieros",
     description: "CITI Program (05/2025) — Conducta de investigación ética y responsable para ingeniería.",
+    link: "https://www.citiprogram.org/verify/?w46e6a78e-561f-4a28-b0b2-c2909f25749e-69450101",
 },
 {
     title: "Mejores Prácticas para Alianzas Globales de Investigación",
     description: "CITI Program (03/2026) — Buenas prácticas de colaboración internacional en investigación.",
+    link: "https://www.citiprogram.org/verify/?w7aaa172d-8dce-4fa7-b51e-192f7e7a2109-69450127",
 },
 {
     title: "Guía para Principiantes para ser Sponsor-Investigador",
     description: "CITI Program (05/2025) — Liderar y gestionar proyectos de investigación académica.",
+    link: "https://www.citiprogram.org/verify/?w68cd544e-4416-4ca2-82b5-a947b44e25fb-69450121",
 },
 {
     title: "Estudios BYOD (Bring Your Own Device)",
     description: "CITI Program (05/2025) — Buenas prácticas para estudios técnicos BYOD.",
+    link: "https://www.citiprogram.org/verify/?w97b6bcdf-84f6-430c-83ea-1f4a2ecf280f-69450122",
 },
 {
     title: "Taller de IA Aplicada a la Ciencia",
     description: "UPSJB (05/2025) — Taller práctico de IA aplicada al trabajo científico.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00208408.pdf",
 },
 {
     title: "Yachaywasi Net 2026 — IA y Transformación Digital",
     description: "UPSJB (06/2026) — Innovación y nuevas tecnologías.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00246645.pdf",
 },
 {
     title: "YACHAYHUASI — Turismo Inteligente y Comunicación Estratégica",
     description: "UPSJB (06/2026) — Transformación digital y gestión sostenible.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00247245.pdf",
 },
 ];
 
