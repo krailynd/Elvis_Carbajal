@@ -9,7 +9,12 @@ import { useLang } from "../i18n";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  const cvHref =
+    lang === "es" ? "/CV_Elvis_Carbajal.pdf" : "/CV_Elvis_Carbajal_EN.pdf";
+  const cvName =
+    lang === "es" ? "Elvis_Carbajal_CV.pdf" : "Elvis_Carbajal_CV_EN.pdf";
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -25,15 +30,15 @@ const Headermain = () => {
           </Link>
           <a
             className="nav-cv"
-            href="/CV_Elvis_Carbajal.pdf"
-            download="Elvis_Carbajal_CV.pdf"
+            href={cvHref}
+            download={cvName}
           >
             {t.nav.downloadCv}
           </a>
           <a
             className="nav-cv-fab"
-            href="/CV_Elvis_Carbajal.pdf"
-            download="Elvis_Carbajal_CV.pdf"
+            href={cvHref}
+            download={cvName}
             aria-label={t.nav.downloadCv}
           >
             {t.nav.downloadCv}
