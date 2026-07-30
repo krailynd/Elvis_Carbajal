@@ -30,6 +30,14 @@ const Headermain = () => {
           >
             {t.nav.downloadCv}
           </a>
+          <a
+            className="nav-cv-fab"
+            href="/CV_Elvis_Carbajal.pdf"
+            download="Elvis_Carbajal_CV.pdf"
+            aria-label={t.nav.downloadCv}
+          >
+            {t.nav.downloadCv}
+          </a>
           <div className="d-flex align-items-center">
           <Langtoggle />
           <Themetoggle />
