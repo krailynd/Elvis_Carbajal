@@ -23,6 +23,13 @@ const Headermain = () => {
           <Link  className="navbar-brand nav_ac" to="/">
             {logotext}
           </Link>
+          <a
+            className="nav-cv"
+            href="/CV_Elvis_Carbajal.pdf"
+            download="Elvis_Carbajal_CV.pdf"
+          >
+            {t.nav.downloadCv}
+          </a>
           <div className="d-flex align-items-center">
           <Langtoggle />
           <Themetoggle />

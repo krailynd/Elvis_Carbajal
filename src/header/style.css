@@ -4,6 +4,48 @@
     padding-right: 10px;
 }
 
+/* Centered "Download CV" link — minimal, borderless */
+.nav-cv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-family: Marcellus;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: var(--text-color-2);
+    text-decoration: none;
+    padding: 6px 4px;
+    transition: color 250ms ease;
+}
+
+.nav-cv::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 300ms ease;
+}
+
+.nav-cv:hover {
+    color: var(--text-color-3);
+}
+
+.nav-cv:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 767px) {
+    .nav-cv {
+        display: none;
+    }
+}
+
 .menu__button {
     color: var(--text-color);
 }
