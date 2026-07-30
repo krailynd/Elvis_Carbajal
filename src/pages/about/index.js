@@ -60,11 +60,15 @@ export const About = () => {
     };
   }, [lang]);
 
-  // Scroll-driven fill + branch activation
+  // Scroll-driven fill + branch activation.
+  // Once the tree reaches the very end it stays fully generated until refresh.
+  const lockedRef = useRef(false);
+
   useEffect(() => {
     let raf = null;
     const update = () => {
       raf = null;
+      if (lockedRef.current) return;
       const doc = document.documentElement;
       const max = doc.scrollHeight - window.innerHeight;
       const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 1;
@@ -74,8 +78,18 @@ export const About = () => {
       const c = containerRef.current;
       if (c) {
         const y = p * c.offsetHeight;
-        const n = branchTopsRef.current.filter((tp) => y >= tp).length;
+        const total = branchTopsRef.current.length;
+        const done = p >= 0.99;
+        const n = done
+          ? total
+          : branchTopsRef.current.filter((tp) => y >= tp).length;
         setActiveCount((prev) => (prev === n ? prev : n));
+        if (done) {
+          lockedRef.current = true;
+          if (lineFillRef.current) {
+            lineFillRef.current.style.transform = "scaleY(1)";
+          }
+        }
       }
     };
     const onScroll = () => {
