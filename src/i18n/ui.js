@@ -18,8 +18,6 @@ export const ui = {
       portfolioBtn: "My Projects",
       contactBtn: "Contact Me",
       photoAria: "Go to About page",
-      cue: "Click here",
-      cueAria: "Go to my projects",
     },
     about: {
       title: "About me",
@@ -87,8 +85,6 @@ export const ui = {
       portfolioBtn: "Mis Proyectos",
       contactBtn: "Contáctame",
       photoAria: "Ir a la página Sobre mí",
-      cue: "Haz click",
-      cueAria: "Ir a mis proyectos",
     },
     about: {
       title: "Sobre mí",

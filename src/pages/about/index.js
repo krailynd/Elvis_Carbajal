@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { XIcon } from "../../components/socialicons";
 import { getTechIcon, getTechUrl } from "../../utils/techicons";
+import ScrollCue from "../../components/scrollcue";
 import { useLang } from "../../i18n";
 
 export const About = () => {
@@ -304,6 +305,7 @@ export const About = () => {
             </div>
           </Col>
         </Row>
+        <ScrollCue to="/contact" label={t.nav.contact} />
       </Container>
     </HelmetProvider>
   );

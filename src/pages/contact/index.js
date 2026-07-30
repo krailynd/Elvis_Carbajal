@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { getEmail, getMailto, getTel } from "../../utils/contact";
+import ScrollCue from "../../components/scrollcue";
 import { useLang } from "../../i18n";
 
 const EMPTY_FORM = {
@@ -224,6 +225,7 @@ export const ContactUs = () => {
             </form>
           </Col>
         </Row>
+        <ScrollCue to="/" label={t.nav.home} />
       </Container>
 
       {sent && (
