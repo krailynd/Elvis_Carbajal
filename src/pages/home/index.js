@@ -69,6 +69,10 @@ export const Home = () => {
             </div>
           </div>
         </div>
+        <Link to="/portfolio" className="home_cue" aria-label={t.home.cueAria}>
+          <span className="home_cue__arrow" aria-hidden="true" />
+          <span className="home_cue__text">{t.home.cue}</span>
+        </Link>
       </section>
     </HelmetProvider>
   );
