@@ -9,6 +9,7 @@ export const ui = {
       projects: "Projects",
       about: "About",
       contact: "Contact",
+      downloadCv: "Download CV",
     },
     sidebar: {
       contact: "Contact Me",
@@ -75,6 +76,7 @@ export const ui = {
       projects: "Proyectos",
       about: "Sobre mí",
       contact: "Contacto",
+      downloadCv: "Descargar CV",
     },
     sidebar: {
       contact: "Contáctame",
