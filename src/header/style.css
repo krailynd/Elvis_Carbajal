@@ -24,7 +24,7 @@
 
 .nav-cv:hover {
     background: var(--text-color-3);
-    color: #fff;
+    color: var(--primary-color);
 }
 
 @media (max-width: 767px) {
@@ -59,7 +59,7 @@
 
     .nav-cv-fab:active {
         background: var(--text-color-3);
-        color: #fff;
+        color: var(--primary-color);
     }
 }
 
