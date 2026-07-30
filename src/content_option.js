@@ -362,34 +362,42 @@ const dataportfolio = [
 const certifications = [{
     title: "Artificial Intelligence (AI) and Human Subject Protections",
     description: "CITI Program — AI and ethical protection of human subjects in digital environments.",
+    link: "https://www.citiprogram.org/verify/?wc54fbdbb-ac57-44e4-b3dc-62bc362a69f0-69450114",
 },
 {
     title: "Responsible Conduct of Research for Engineers",
     description: "CITI Program (05/2025) — Ethical and responsible research conduct for engineering.",
+    link: "https://www.citiprogram.org/verify/?w46e6a78e-561f-4a28-b0b2-c2909f25749e-69450101",
 },
 {
     title: "Best Practices for Global Research Partnerships",
     description: "CITI Program (03/2026) — Global research collaboration best practices.",
+    link: "https://www.citiprogram.org/verify/?w7aaa172d-8dce-4fa7-b51e-192f7e7a2109-69450127",
 },
 {
     title: "A Beginner’s Guide to Being a Sponsor-Investigator",
     description: "CITI Program (05/2025) — Leading and managing academic research projects.",
+    link: "https://www.citiprogram.org/verify/?w68cd544e-4416-4ca2-82b5-a947b44e25fb-69450121",
 },
 {
     title: "Bring Your Own Device (BYOD) Studies",
     description: "CITI Program (05/2025) — Best practices for BYOD technical studies.",
+    link: "https://www.citiprogram.org/verify/?w97b6bcdf-84f6-430c-83ea-1f4a2ecf280f-69450122",
 },
 {
     title: "Applied AI to Science Workshop",
     description: "UPSJB (05/2025) — Hands-on workshop on AI applied to scientific work.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00208408.pdf",
 },
 {
     title: "Yachaywasi Net 2026 — AI & Digital Transformation",
     description: "UPSJB (06/2026) — Innovation and new technologies.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00246645.pdf",
 },
 {
     title: "YACHAYHUASI — Smart Tourism & Strategic Communication",
     description: "UPSJB (06/2026) — Digital transformation and sustainable management.",
+    link: "https://documentodigital.upsjb.edu.pe/apis/Documentos/CE-0061153730RH00247245.pdf",
 },
 ];
 

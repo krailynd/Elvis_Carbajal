@@ -66,6 +66,25 @@
     border-bottom: solid 2px var(--secondary-color);
 }
 
+/* --- Certification verification links --- */
+
+.cert_link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 250ms ease;
+}
+
+.cert_link::after {
+    content: "\2197";
+    margin-left: 8px;
+    font-size: 0.75em;
+    color: var(--text-color-3);
+}
+
+.cert_link:hover {
+    color: var(--text-color-3);
+}
+
 .service-section .service-category-title {
     padding-bottom: 4px;
 }

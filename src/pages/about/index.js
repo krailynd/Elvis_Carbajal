@@ -152,7 +152,20 @@ export const About = () => {
             {certifications.map((data, i) => {
               return (
                 <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
+                  <h5 className="service__title">
+                    {data.link ? (
+                      <a
+                        className="cert_link"
+                        href={data.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {data.title}
+                      </a>
+                    ) : (
+                      data.title
+                    )}
+                  </h5>
                   <p className="service_desc">{data.description}</p>
                 </div>
               );
