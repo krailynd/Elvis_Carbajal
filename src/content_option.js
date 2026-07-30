@@ -1,7 +1,7 @@
 const logotext = "KRAILYND";
 const meta = {
     title: "Elvis Carbajal (Krailynd)",
-    description: "Java Software Developer from Ica, Peru — Spring Boot, REST APIs, MySQL/PostgreSQL. Available for work. Also training in Data Science & AI.",
+    description: "Software Developer from Ica, Peru — 2 years building applications that solve real problems. Java & Spring Boot specialist, UI/UX design. Available for work. Also training in Data Science & AI.",
 };
 
 const introdata = {
@@ -11,13 +11,13 @@ const introdata = {
         second: "Spring Boot · REST APIs · SQL Databases",
         third: "Data Science & AI — In Training",
     },
-    description: "Java Software Developer from Ica, Peru — available for internships, freelance projects and junior roles. I specialize in Java and its ecosystem: Spring Boot, REST API design, and relational databases (PostgreSQL, MySQL, MariaDB). Separately, I'm following a structured self-study roadmap toward Data Science & AI — that's my long-term formation, public on GitHub. What I offer today is solid Java/backend development.",
+    description: "Software Developer from Ica, Peru with 2 years of experience building applications that solve real problems — available for work: freelance projects, full-time or part-time roles, whatever fits. I specialize in Java and its ecosystem: Spring Boot, REST API design, and relational databases (PostgreSQL, MySQL, MariaDB) — and I also design UI/UX. Separately, I'm following a structured self-study roadmap toward Data Science & AI — that's my long-term formation, public on GitHub.",
     your_img_url: "https://i.ibb.co/VYmK2gfZ/Imagen12222.png",
 };
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I'm a Software Developer and I specialize in Java — the language I know deepest and enjoy most. I build backend services with Spring Boot, design and implement REST APIs, and work with relational databases (PostgreSQL, MySQL, MariaDB). I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru), and I've already shipped real products: an educational platform with 31+ interactive physics/math simulators, Java desktop apps (SahaNotes, SahaCalc), an inventory REST API, an open-source Rust terminal file manager (Open-SahaDisk, from my SahaHacking org), and I run my own self-hosted server — SahaCloud — with Dockerized services behind a reverse proxy and Cloudflare tunnels. Separately — and I want to be transparent about this — I'm in training toward Data Science & AI through a structured self-study roadmap that runs in parallel with my work and studies. That's my long-term direction, not my current job title: what I offer today is solid Java and backend development. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I produce music and design digital content.",
+    aboutme: "I'm a Software Developer with 2 years of experience building applications that solve real problems, and I specialize in Java — the language I know deepest and enjoy most. I build backend services with Spring Boot, design and implement REST APIs, work with relational databases (PostgreSQL, MySQL, MariaDB), and design UI/UX — interfaces that are clear, usable and built with intention. I'm a Systems Engineering and Computing student at UPSJB (Ica, Peru), and I've already shipped real products: an educational platform with 31+ interactive physics/math simulators, Java desktop apps (SahaNotes, SahaCalc), an inventory REST API, an open-source Rust terminal file manager (Open-SahaDisk, from my SahaHacking org), and I run my own self-hosted server — SahaCloud — with Dockerized services behind a reverse proxy and Cloudflare tunnels. Separately — and I want to be transparent about this — I'm in training toward Data Science & AI through a structured self-study roadmap that runs in parallel with my work and studies. That's my long-term direction, not my current job title: what I offer today is solid Java and backend development, plus UI/UX design. I'm CITI-certified in AI ethics and responsible research. When I'm not coding, I produce music and design digital content.",
 };
 const worktimeline = [{
     jobtitle: "Lead Full Stack Developer & UI Designer",
@@ -104,6 +104,11 @@ const skills = [{
     icons: ["Rust", "Docker", "Linux"],
 },
 {
+    name: "UI/UX Design",
+    description: "Interface and experience design for web and desktop: responsive layouts, design systems, and user flows built with intention — the same care I put into this portfolio. Affinity, Krita, Aseprite and Canva.",
+    icons: ["Canva", "Aseprite"],
+},
+{
     name: "Data & AI — In Training",
     description: "Python, Pandas and statistics through a structured self-study roadmap (Kaggle, freeCodeCamp). My long-term formation — public progress on GitHub.",
     icons: ["Python", "Pandas", "Jupyter"],
@@ -125,11 +130,11 @@ const skills = [{
 
 const services = [{
     title: "Java Backend Development — For Hire",
-    description: "Spring Boot services, REST API design and implementation, and relational databases (PostgreSQL, MySQL, MariaDB). Available for internships, freelance projects and junior roles.",
+    description: "Spring Boot services, REST API design and implementation, and relational databases (PostgreSQL, MySQL, MariaDB). 2 years of experience building applications that solve real problems — open to freelance projects and full-time or part-time roles, whatever fits.",
 },
 {
-    title: "Desktop Apps & Automation",
-    description: "Java desktop applications, Linux scripting and automation (Bash, Python, Nushell), and deployment/self-hosting on my own server infrastructure.",
+    title: "Desktop Apps, UI/UX & Automation",
+    description: "Java desktop applications, UI/UX design for web and desktop, Linux scripting and automation (Bash, Python, Nushell), and deployment/self-hosting on my own server infrastructure.",
 },
 {
     title: "Data & AI — In Training (not for hire yet)",
@@ -391,7 +396,7 @@ const certifications = [{
 // NOTE: email and phone are intentionally NOT stored here in plain text.
 // They are built at runtime in src/utils/contact.js (anti-scraper).
 const contactConfig = {
-    description: "Available now for Java/backend development work — internships, freelance projects and junior roles. (I'm also training in Data Science & AI, but Java is what I offer today.) Let's talk!",
+    description: "Available now for development work — freelance projects, full-time or part-time roles, whatever fits. Java is my specialty, and I also design UI/UX. (I'm also training in Data Science & AI, but Java is what I offer today.) Let's talk!",
 };
 
 const socialprofils = {
