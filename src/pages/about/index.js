@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -8,7 +8,7 @@ import { getTechIcon, getTechUrl } from "../../utils/techicons";
 import { useLang } from "../../i18n";
 
 export const About = () => {
-  const { content, t } = useLang();
+  const { content, t, lang } = useLang();
   const {
     dataabout,
     meta,
@@ -20,8 +20,29 @@ export const About = () => {
     socialprofils,
   } = content;
 
+  const containerRef = useRef(null);
   const lineFillRef = useRef(null);
+  const branchTopsRef = useRef([]);
+  const [branchTops, setBranchTops] = useState([]);
+  const [activeCount, setActiveCount] = useState(0);
 
+  // Measure each section title's vertical center (relative to the container)
+  useEffect(() => {
+    const measure = () => {
+      const c = containerRef.current;
+      if (!c) return;
+      const tops = Array.from(c.querySelectorAll("h3.color_sec")).map(
+        (el) => el.offsetTop + el.offsetHeight / 2 - 1
+      );
+      branchTopsRef.current = tops;
+      setBranchTops(tops);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [lang]);
+
+  // Scroll-driven fill + branch activation
   useEffect(() => {
     let raf = null;
     const update = () => {
@@ -31,6 +52,12 @@ export const About = () => {
       const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 1;
       if (lineFillRef.current) {
         lineFillRef.current.style.transform = `scaleY(${p})`;
+      }
+      const c = containerRef.current;
+      if (c) {
+        const y = p * c.offsetHeight;
+        const n = branchTopsRef.current.filter((tp) => y >= tp).length;
+        setActiveCount((prev) => (prev === n ? prev : n));
       }
     };
     const onScroll = () => {
@@ -48,7 +75,7 @@ export const About = () => {
 
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header" ref={containerRef}>
         <Helmet>
           <meta charSet="utf-8" />
           <title> {t.about.title} | {meta.title}</title>
@@ -57,6 +84,17 @@ export const About = () => {
         <div className="about_line" aria-hidden="true">
           <div className="about_line__fill" ref={lineFillRef} />
         </div>
+        {branchTops.map((top, i) => (
+          <span
+            key={i}
+            className={`about_branch${i < activeCount ? " on" : ""}`}
+            style={{ top: `${top}px` }}
+            aria-hidden="true"
+          >
+            <span className="about_branch__stem" />
+            <span className="about_branch__head" />
+          </span>
+        ))}
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
             <h1 className="display-4 mb-4">{t.about.title}</h1>
