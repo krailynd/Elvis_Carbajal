@@ -4,7 +4,7 @@
     padding-right: 10px;
 }
 
-/* Centered "Download CV" link — minimal, borderless */
+/* Centered "Download CV" link — fitted rectangular chip, theme-aware */
 .nav-cv {
     position: absolute;
     top: 50%;
@@ -14,30 +14,17 @@
     font-family: Marcellus;
     font-size: 1rem;
     letter-spacing: 0.12em;
-    color: var(--text-color-2);
+    color: var(--primary-color);
+    background: var(--text-color-2);
     text-decoration: none;
-    padding: 6px 4px;
-    transition: color 250ms ease;
-}
-
-.nav-cv::after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    right: 4px;
-    bottom: 0;
-    height: 1px;
-    background: currentColor;
-    transform: scaleX(0);
-    transition: transform 300ms ease;
+    padding: 6px 16px;
+    border-radius: 3px;
+    transition: background 250ms ease, color 250ms ease;
 }
 
 .nav-cv:hover {
-    color: var(--text-color-3);
-}
-
-.nav-cv:hover::after {
-    transform: scaleX(1);
+    background: var(--text-color-3);
+    color: #fff;
 }
 
 @media (max-width: 767px) {
