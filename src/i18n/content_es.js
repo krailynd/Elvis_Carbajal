@@ -29,6 +29,11 @@ const worktimeline = [{
     date: "05/2025 - Presente",
 },
 {
+    jobtitle: "Arquitecto Full-Stack y Desarrollador de Software (Freelance)",
+    where: "Provocos Ica — Monorepo Empresarial de E-Commerce, POS y Cocina KDS",
+    date: "2026 - Presente",
+},
+{
     jobtitle: "Fundador y Desarrollador Líder — Open Source",
     where: "SahaHacking Org | Open-SahaDisk — gestor de terminal y analizador de disco en Rust",
     date: "2026 - Presente",
@@ -148,6 +153,19 @@ const services = [{
 // tech cat keys stay in English (internal keys matching techCats in ui.js)
 const dataportfolio = [
 // --- Backend, Sistemas y Arquitectura ---
+{
+    section: "Backend, Sistemas y Arquitectura",
+    title: "Provocos Ica — Monorepo Empresarial POS y E-Commerce",
+    description: "Monorepo empresarial multicapa con arquitectura MVC limpia para pastelería y repostería artesanal. Integra 4 capas orquestadas con Docker Compose: tienda pública SPA en React 18, API REST en Laravel (PHP 8.4) con reserva transaccional de stock, backoffice en Java 17 + Tomcat (punto de venta POS de mostrador y sistema de cocina KDS con deducción automática de insumos por receta) y Microsoft SQL Server (33 tablas relacionales ACID).",
+    img: process.env.PUBLIC_URL + "/provocos-arch.svg",
+    tech: [
+        { name: "Java", cat: "Backend" },
+        { name: "PHP", cat: "Backend" },
+        { name: "React", cat: "Frontend & UI" },
+        { name: "SQL Server", cat: "Databases" },
+        { name: "Docker", cat: "DevOps & Automation" },
+    ],
+},
 {
     section: "Backend, Sistemas y Arquitectura",
     title: "Open-SahaDisk",

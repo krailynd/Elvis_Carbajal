@@ -34,6 +34,7 @@ export const ui = {
       github: "GitHub",
       live: "Live Preview",
       viewOnGithub: "View on GitHub",
+      confidential: "Enterprise Case Study (Private / NDA)",
       panelSub:
         "Languages & technologies — click any item to open its official docs",
       panelAria: "Project languages",
@@ -101,6 +102,7 @@ export const ui = {
       github: "GitHub",
       live: "Vista Previa",
       viewOnGithub: "Ver en GitHub",
+      confidential: "Caso Empresarial (Privado / NDA)",
       panelSub:
         "Lenguajes y tecnologías — haz click en cualquiera para abrir su documentación oficial",
       panelAria: "Lenguajes del proyecto",

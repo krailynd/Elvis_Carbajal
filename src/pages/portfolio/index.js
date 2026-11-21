@@ -124,6 +124,11 @@ export const Portfolio = () => {
                               </div>
                             </a>
                           )}
+                          {!p.github && !p.demo && (
+                            <span className="pf_badge_confidential">
+                              {t.portfolio.confidential}
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="pf_media">
@@ -154,6 +159,11 @@ export const Portfolio = () => {
                               <FaExternalLinkAlt className="pf_btn-icon" />
                               {t.portfolio.live}
                             </a>
+                          )}
+                          {!p.github && !p.demo && (
+                            <span className="pf_overlay_confidential">
+                              {t.portfolio.confidential}
+                            </span>
                           )}
                         </div>
                       </div>

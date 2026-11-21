@@ -27,6 +27,11 @@ const worktimeline = [{
     date: "05/2025 - Present",
 },
 {
+    jobtitle: "Full-Stack Architect & Software Engineer (Freelance)",
+    where: "Provocos Ica — Enterprise E-Commerce, POS & Kitchen Monorepo",
+    date: "2026 - Present",
+},
+{
     jobtitle: "Founder & Lead Developer — Open Source",
     where: "SahaHacking Org | Open-SahaDisk — Rust terminal file manager & disk analyzer",
     date: "2026 - Present",
@@ -147,6 +152,19 @@ const services = [{
 // tech: [{ name, cat }] — cat is one of: "Backend", "Frontend & UI", "Databases", "DevOps & Automation", "Data & ML"
 const dataportfolio = [
 // --- Backend, Systems & Architecture ---
+{
+    section: "Backend, Systems & Architecture",
+    title: "Provocos Ica — Enterprise POS & E-Commerce Monorepo",
+    description: "Multi-tier enterprise monorepo with clean MVC architecture for an artisanal vegan bakery. Integrates 4 modular tiers orchestrated via Docker Compose: React 18 storefront SPA, Laravel REST API (PHP 8.4) with transactional stock reservation, Java 17 + Tomcat backoffice (counter POS & kitchen KDS with recipe ingredient consumption), and Microsoft SQL Server (33 relational ACID tables).",
+    img: process.env.PUBLIC_URL + "/provocos-arch.svg",
+    tech: [
+        { name: "Java", cat: "Backend" },
+        { name: "PHP", cat: "Backend" },
+        { name: "React", cat: "Frontend & UI" },
+        { name: "SQL Server", cat: "Databases" },
+        { name: "Docker", cat: "DevOps & Automation" },
+    ],
+},
 {
     section: "Backend, Systems & Architecture",
     title: "Open-SahaDisk",

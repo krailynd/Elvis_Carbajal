@@ -14,6 +14,7 @@ Software Developer and Systems Engineering student at UPSJB (Ica, Peru). I engin
 - **Design & Creative:** UI/UX Design, Affinity, Krita, Aseprite, Canva, Ableton Live
 
 ## 💡 Featured Projects
+- **Provocos Ica (Enterprise Monorepo · Confidential):** Multi-tier enterprise system with clean MVC architecture (React 18 SPA + Laravel REST API + Java 17 Tomcat POS/KDS + Microsoft SQL Server 33 tables ACID) orchestrated via Docker Compose.
 - **[Open-SahaDisk](https://github.com/sahahacking/open-sahadisk):** Cross-platform terminal file manager & disk analyzer in Rust with Ratatui TUI, background scanning, and integrated Docker management.
 - **[Odontologia Local](https://github.com/krailynd/OdontologiaLocal):** Full-stack dental clinic ERP in pure PHP 8 + MySQL (MVC architecture, Google OAuth 2.0, RFC 6238 TOTP 2FA, RBAC, clinical records).
 - **[Maison](https://github.com/krailynd/maison-tienda-moda):** Haute couture luxury fashion e-commerce built in React 18, TypeScript, Vite, and GSAP ScrollTrigger timeline animations.
