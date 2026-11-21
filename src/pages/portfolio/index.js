@@ -55,6 +55,29 @@ export const Portfolio = () => {
                       <div className="pf_info">
                         <h4 className="pf_title">{p.title}</h4>
                         <p className="pf_desc">{p.description}</p>
+                        {p.tech && p.tech.length > 0 && (
+                          <div className="pf_badge_row">
+                            {p.tech.slice(0, 4).map((tItem) => {
+                              const Icon = getTechIcon(tItem.name);
+                              return (
+                                <span key={tItem.name} className="pf_badge">
+                                  <Icon className="pf_badge_icon" />
+                                  {tItem.name}
+                                </span>
+                              );
+                            })}
+                            {p.tech.length > 4 && (
+                              <button
+                                type="button"
+                                className="pf_badge pf_badge_more"
+                                onClick={() => setOpenPanel(myIndex)}
+                                title={t.portfolio.languages}
+                              >
+                                +{p.tech.length - 4}
+                              </button>
+                            )}
+                          </div>
+                        )}
                         <div className="pf_actions">
                           {p.tech && p.tech.length > 0 && (
                             <button
